@@ -1,0 +1,88 @@
+baseurl: https://nostalgic-dijkstra-1e850d.netlify.app/
+languageCode: en-us
+theme: hugo-theme-stack
+paginate: 5
+title: Sajib Devnath
+disqusShortname: hugo-theme-stack
+DefaultContentLanguage: en
+permalinks:
+  page: /:slug/
+  post: /p/:slug/
+params:
+  article:
+    license:
+      default: Licensed under CC BY-NC-SA 4.0
+      enabled: no
+    math: no
+  comments:
+    enabled: no
+    provider: disqus
+    utterances:
+      issueTerm: pathname
+      label: ''
+      repo: ''
+      theme: preferred-color-scheme
+  dateFormat:
+    lastUpdated: Jan 02, 2006 15:04 EST
+    published: Jan 02, 2006
+  defaultImage:
+    opengraph:
+      enabled: no
+      local: no
+      src: ''
+  featuredImageField: image
+  mainSections: post
+  opengraph:
+    twitter:
+      card: summary_large_image
+      site: ''
+  rssFullContent: yes
+  sidebar:
+    avatar: img/photo.jpg
+    coffee: img/coffee-custom.png
+#    emoji: "\U0001F365"
+    subtitle: Data Enthuist
+  widgets:
+    archives:
+      limit: 5
+      path: archives
+    enabled:
+      - search
+      - archives
+      - tag-cloud
+    tagCloud:
+      limit: 10
+menu:
+  main:
+    - identifier: home
+      name: Home
+      pre: home
+      url: /
+      weight: -100
+    - identifier: about-cn
+      name: About
+      pre: user
+      url: about
+      weight: -90
+    - identifier: archives
+      name: Archives
+      pre: archives
+      url: archives
+      weight: -70
+    - identifier: search
+      name: Search
+      pre: search
+      url: search
+      weight: -60
+related:
+  includeNewer: yes
+  indices:
+    - name: tags
+      weight: 100
+    - name: categories
+      weight: 200
+  threshold: 60
+  toLower: no
+markup:
+  highlight:
+    noClasses: no

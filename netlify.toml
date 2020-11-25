@@ -1,0 +1,15 @@
+[build]
+command = "hugo"
+publish = "public"
+[build.environment]
+HUGO_VERSION = "0.78.2"
+TZ = "Asia/Dhaka"
+
+[context]
+[context.branch-deploy]
+command = "hugo -b $DEPLOY_PRIME_URL --buildFuture"
+[context.deploy-preview]
+command = "hugo -b $DEPLOY_PRIME_URL --buildFuture"
+[context.production]
+[context.production.environment]
+HUGO_ENV = "production"
