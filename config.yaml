@@ -5,6 +5,7 @@ paginate: 5
 title: Sajib Devnath
 disqusShortname: hugo-theme-stack
 DefaultContentLanguage: en
+googleAnalytics: G-X5RJNT25FN
 permalinks:
   page: /:slug/
   post: /p/:slug/
