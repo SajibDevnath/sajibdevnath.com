@@ -28,15 +28,15 @@ params:
     published: Jan 02, 2006
   defaultImage:
     opengraph:
-      enabled: no
+      enabled: yes
       local: no
-      src: ''
+      src: https://i.imgur.com/pzlJcEJ.jpg
   featuredImageField: image
   mainSections: post
   opengraph:
     twitter:
       card: summary_large_image
-      site: ''
+      site: 'SajibDevnath_'
   rssFullContent: yes
   sidebar:
     avatar: img/photo.jpg
@@ -87,3 +87,5 @@ related:
 markup:
   highlight:
     noClasses: no
+social_links:
+  twitter: SajibDevnath_
