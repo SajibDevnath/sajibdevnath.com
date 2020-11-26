@@ -11,7 +11,7 @@ tags:
   - ggplot2
 output:
   blogdown::html_page:
-    highlight: kate
+    highlight: espresso
 ---
 
 
