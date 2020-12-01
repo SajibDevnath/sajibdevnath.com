@@ -7,7 +7,7 @@ image: op.jpg
 categories:
   - Dataviz
 tags:
-  - data-visualization
+  - youtube
   - reactable
 output:
   blogdown::html_page:
