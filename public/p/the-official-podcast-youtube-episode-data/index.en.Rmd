@@ -89,6 +89,8 @@ reactable(
     pageNext = "\u276f"
   ),
   pagination = TRUE,
+  defaultPageSize = 25, 
+  minRows = 25,
   paginationType = "simple",
   theme = reactableTheme(
     borderColor = "#dfe2e5",
