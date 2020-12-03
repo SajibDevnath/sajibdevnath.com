@@ -1,7 +1,7 @@
 baseurl: https://www.sajibdevnath.com/
 languageCode: en-us
 theme: hugo-theme-stack
-paginate: 5
+paginate: 8
 title: Sajib Devnath
 disqusShortname: hugo-theme-stack
 DefaultContentLanguage: en
