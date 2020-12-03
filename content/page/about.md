@@ -12,4 +12,4 @@ title: About
 Hello,
 My name is Sajib Devnath Akash. I like to work with data, specially finding new information from data. 
 
-I am currently learning `ggplot2`. I am very interested in data visualization. 
+I am very interested in data visualization. I am currently learning `ggplot2`. 
