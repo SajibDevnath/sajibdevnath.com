@@ -75,6 +75,11 @@ menu:
       pre: search
       url: search
       weight: -60
+    - identifier: contact
+      name: Contact
+      pre: contact
+      url: contact
+      weight: -50
 related:
   includeNewer: yes
   indices:

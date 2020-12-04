@@ -38,6 +38,16 @@
   </url>
   
   <url>
+    <loc>https://www.sajibdevnath.com/new-page/</loc>
+    <lastmod>2020-12-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.sajibdevnath.com/page/</loc>
+    <lastmod>2020-12-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.sajibdevnath.com/post/</loc>
     <lastmod>2020-12-04T00:00:00+00:00</lastmod>
   </url>
@@ -53,6 +63,11 @@
   </url>
   
   <url>
+    <loc>https://www.sajibdevnath.com/tags/youtube/</loc>
+    <lastmod>2020-12-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.sajibdevnath.com/tags/reactable/</loc>
     <lastmod>2020-12-01T00:00:00+00:00</lastmod>
   </url>
@@ -63,17 +78,7 @@
   </url>
   
   <url>
-    <loc>https://www.sajibdevnath.com/tags/youtube/</loc>
-    <lastmod>2020-12-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.sajibdevnath.com/archives/</loc>
-    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.sajibdevnath.com/page/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url>
   
@@ -87,11 +92,19 @@
   </url>
   
   <url>
+    <loc>https://www.sajibdevnath.com/contact/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.sajibdevnath.com/search/</loc>
   </url>
   
   <url>
     <loc>https://www.sajibdevnath.com/categories/test/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.sajibdevnath.com/thank-you/</loc>
   </url>
   
 </urlset>
