@@ -6,7 +6,233 @@
         <description>Recent content on Sajib Devnath</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 01 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.sajibdevnath.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 04 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.sajibdevnath.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>#1 Hundred ggplot charts  - Washington Trails</title>
+        <link>https://www.sajibdevnath.com/p/100-ggplots-washington-trails/</link>
+        <pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.sajibdevnath.com/p/100-ggplots-washington-trails/</guid>
+        <description>&lt;img src="https://www.sajibdevnath.com/p/100-ggplots-washington-trails/images/1.png" alt="Featured image of post #1 Hundred ggplot charts  - Washington Trails" /&gt;
+&lt;script src=&#34;https://www.sajibdevnath.com/p/100-ggplots-washington-trails/index.en_files/accessible-code-block/empty-anchor.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://www.sajibdevnath.com/p/100-ggplots-washington-trails/index.en_files/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://www.sajibdevnath.com/p/100-ggplots-washington-trails/index.en_files/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;style type=&#34;text/css&#34;&gt;
+code.sourceCode &gt; span { display: inline-block; line-height: 1.25; }
+code.sourceCode &gt; span { color: inherit; text-decoration: inherit; }
+code.sourceCode &gt; span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode &gt; span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code &gt; span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code &gt; span &gt; a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #2a211c;
+    color: #bdae9d;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #bdae9d;  padding-left: 4px; }
+div.sourceCode
+  { color: #bdae9d; background-color: #2a211c; }
+@media screen {
+code.sourceCode &gt; span &gt; a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ffff00; } /* Alert */
+code span.an { color: #0066ff; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #44aa43; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #43a8ed; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #049b0a; } /* Char */
+code span.cn { } /* Constant */
+code span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Comment */
+code span.do { color: #0066ff; font-style: italic; } /* Documentation */
+code span.dt { text-decoration: underline; } /* DataType */
+code span.dv { color: #44aa43; } /* DecVal */
+code span.er { color: #ffff00; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #44aa43; } /* Float */
+code span.fu { color: #ff9358; font-weight: bold; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #43a8ed; font-weight: bold; } /* Keyword */
+code span.op { } /* Operator */
+code span.pp { font-weight: bold; } /* Preprocessor */
+code span.sc { color: #049b0a; } /* SpecialChar */
+code span.ss { color: #049b0a; } /* SpecialString */
+code span.st { color: #049b0a; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #049b0a; } /* VerbatimString */
+code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+&lt;/style&gt;
+
+
+&lt;p&gt;Load the libraries:&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb1&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;span id=&#34;cb1-1&#34;&gt;&lt;a href=&#34;#cb1-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;library&lt;/span&gt;(tidyverse)&lt;/span&gt;
+&lt;span id=&#34;cb1-2&#34;&gt;&lt;a href=&#34;#cb1-2&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;library&lt;/span&gt;(stringr)&lt;/span&gt;
+&lt;span id=&#34;cb1-3&#34;&gt;&lt;a href=&#34;#cb1-3&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;library&lt;/span&gt;(Cairo)&lt;/span&gt;
+&lt;span id=&#34;cb1-4&#34;&gt;&lt;a href=&#34;#cb1-4&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;library&lt;/span&gt;(scales)&lt;/span&gt;
+&lt;span id=&#34;cb1-5&#34;&gt;&lt;a href=&#34;#cb1-5&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;library&lt;/span&gt;(showtext)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Font:&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb2&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;span id=&#34;cb2-1&#34;&gt;&lt;a href=&#34;#cb2-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;font_add_google&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;name =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;Playfair Display&amp;quot;&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;family =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;playfair&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Loading the data:&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb3&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;span id=&#34;cb3-1&#34;&gt;&lt;a href=&#34;#cb3-1&#34;&gt;&lt;/a&gt;hike_data &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;readr&lt;span class=&#34;op&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;read_rds&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;url&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;#39;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-11-24/hike_data.rds&amp;#39;&lt;/span&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div id=&#34;data-manipulation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data manipulation:&lt;/h2&gt;
+&lt;p&gt;Extract regions:&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb4&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;span id=&#34;cb4-1&#34;&gt;&lt;a href=&#34;#cb4-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;word&lt;/span&gt;(hike_data&lt;span class=&#34;op&#34;&gt;$&lt;/span&gt;location, &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;sep =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot; -- &amp;quot;&lt;/span&gt;) -&amp;gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;hike_data&lt;span class=&#34;op&#34;&gt;$&lt;/span&gt;region&lt;/span&gt;
+&lt;span id=&#34;cb4-2&#34;&gt;&lt;a href=&#34;#cb4-2&#34;&gt;&lt;/a&gt;hike_data&lt;span class=&#34;op&#34;&gt;$&lt;/span&gt;region &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;as.factor&lt;/span&gt;(hike_data&lt;span class=&#34;op&#34;&gt;$&lt;/span&gt;region)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Extract miles:&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb5&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;span id=&#34;cb5-1&#34;&gt;&lt;a href=&#34;#cb5-1&#34;&gt;&lt;/a&gt;hike_data&lt;span class=&#34;op&#34;&gt;$&lt;/span&gt;length_num &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;parse_number&lt;/span&gt;(hike_data&lt;span class=&#34;op&#34;&gt;$&lt;/span&gt;length)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb6&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;span id=&#34;cb6-1&#34;&gt;&lt;a href=&#34;#cb6-1&#34;&gt;&lt;/a&gt;hike_data&lt;span class=&#34;op&#34;&gt;$&lt;/span&gt;trackNr &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;as.numeric&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;row.names&lt;/span&gt;(hike_data))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Converting data types&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb7&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;span id=&#34;cb7-1&#34;&gt;&lt;a href=&#34;#cb7-1&#34;&gt;&lt;/a&gt;hike_data &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;hike_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb7-2&#34;&gt;&lt;a href=&#34;#cb7-2&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate_at&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;c&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;gain&amp;quot;&lt;/span&gt;, &lt;span class=&#34;st&#34;&gt;&amp;quot;highpoint&amp;quot;&lt;/span&gt;, &lt;span class=&#34;st&#34;&gt;&amp;quot;rating&amp;quot;&lt;/span&gt;), as.numeric)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Calculate cummulative length, mean(gain)&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb8&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;span id=&#34;cb8-1&#34;&gt;&lt;a href=&#34;#cb8-1&#34;&gt;&lt;/a&gt;summary_stats &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;hike_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb8-2&#34;&gt;&lt;a href=&#34;#cb8-2&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;group_by&lt;/span&gt;(region) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb8-3&#34;&gt;&lt;a href=&#34;#cb8-3&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;summarise&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;sum_length =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;sum&lt;/span&gt;(length_num),&lt;/span&gt;
+&lt;span id=&#34;cb8-4&#34;&gt;&lt;a href=&#34;#cb8-4&#34;&gt;&lt;/a&gt;            &lt;span class=&#34;dt&#34;&gt;mean_gain =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;mean&lt;/span&gt;(gain),&lt;/span&gt;
+&lt;span id=&#34;cb8-5&#34;&gt;&lt;a href=&#34;#cb8-5&#34;&gt;&lt;/a&gt;            &lt;span class=&#34;dt&#34;&gt;count =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;n&lt;/span&gt;()) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb8-6&#34;&gt;&lt;a href=&#34;#cb8-6&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;mean_gain =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;round&lt;/span&gt;(mean_gain, &lt;span class=&#34;dt&#34;&gt;digits =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;0&lt;/span&gt;),&lt;/span&gt;
+&lt;span id=&#34;cb8-7&#34;&gt;&lt;a href=&#34;#cb8-7&#34;&gt;&lt;/a&gt;         &lt;span class=&#34;dt&#34;&gt;sum_length =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;round&lt;/span&gt;(sum_length, &lt;span class=&#34;dt&#34;&gt;digits =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;0&lt;/span&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-visualization&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data Visualization:&lt;/h2&gt;
+&lt;p&gt;Color choice:&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb9&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;span id=&#34;cb9-1&#34;&gt;&lt;a href=&#34;#cb9-1&#34;&gt;&lt;/a&gt;prismatic&lt;span class=&#34;op&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;color&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;c&lt;/span&gt;( &lt;span class=&#34;st&#34;&gt;&amp;quot;#6C5B7B&amp;quot;&lt;/span&gt; ,&lt;span class=&#34;st&#34;&gt;&amp;quot;#C06C84&amp;quot;&lt;/span&gt;,&lt;span class=&#34;st&#34;&gt;&amp;quot;#F67280&amp;quot;&lt;/span&gt;,&lt;span class=&#34;st&#34;&gt;&amp;quot;#F8B195&amp;quot;&lt;/span&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;## &amp;lt;colors&amp;gt;
+## #6C5B7BFF #C06C84FF #F67280FF #F8B195FF&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb11&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;span id=&#34;cb11-1&#34;&gt;&lt;a href=&#34;#cb11-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;showtext_auto&lt;/span&gt;()&lt;/span&gt;
+&lt;span id=&#34;cb11-2&#34;&gt;&lt;a href=&#34;#cb11-2&#34;&gt;&lt;/a&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-3&#34;&gt;&lt;a href=&#34;#cb11-3&#34;&gt;&lt;/a&gt;summary_stats&lt;span class=&#34;op&#34;&gt;$&lt;/span&gt;region &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;forcats&lt;span class=&#34;op&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;fct_reorder&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;str_wrap&lt;/span&gt;(summary_stats&lt;span class=&#34;op&#34;&gt;$&lt;/span&gt;region, &lt;span class=&#34;dv&#34;&gt;5&lt;/span&gt;), summary_stats&lt;span class=&#34;op&#34;&gt;$&lt;/span&gt;sum_length)&lt;/span&gt;
+&lt;span id=&#34;cb11-4&#34;&gt;&lt;a href=&#34;#cb11-4&#34;&gt;&lt;/a&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-5&#34;&gt;&lt;a href=&#34;#cb11-5&#34;&gt;&lt;/a&gt;plot &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(summary_stats) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-6&#34;&gt;&lt;a href=&#34;#cb11-6&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;co&#34;&gt;# custom panel grid&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-7&#34;&gt;&lt;a href=&#34;#cb11-7&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_hline&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;yintercept =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;0&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;color =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;lightgrey&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-8&#34;&gt;&lt;a href=&#34;#cb11-8&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_hline&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;yintercept =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1000&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;color =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;lightgrey&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-9&#34;&gt;&lt;a href=&#34;#cb11-9&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_hline&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;yintercept =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;2000&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;color =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;lightgrey&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-10&#34;&gt;&lt;a href=&#34;#cb11-10&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_hline&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;yintercept =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;3000&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;color =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;lightgrey&amp;quot;&lt;/span&gt;)  &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-11&#34;&gt;&lt;a href=&#34;#cb11-11&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_col&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;/span&gt;
+&lt;span id=&#34;cb11-12&#34;&gt;&lt;a href=&#34;#cb11-12&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; region, &lt;span class=&#34;co&#34;&gt;#is numeric&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-13&#34;&gt;&lt;a href=&#34;#cb11-13&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; sum_length, &lt;span class=&#34;co&#34;&gt;#is numeric&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-14&#34;&gt;&lt;a href=&#34;#cb11-14&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;fill =&lt;/span&gt; count), &lt;span class=&#34;co&#34;&gt;#is a factor&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-15&#34;&gt;&lt;a href=&#34;#cb11-15&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;position =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;dodge2&amp;quot;&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb11-16&#34;&gt;&lt;a href=&#34;#cb11-16&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;show.legend =&lt;/span&gt; &lt;span class=&#34;ot&#34;&gt;TRUE&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb11-17&#34;&gt;&lt;a href=&#34;#cb11-17&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;alpha =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.9&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb11-18&#34;&gt;&lt;a href=&#34;#cb11-18&#34;&gt;&lt;/a&gt;    ) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-19&#34;&gt;&lt;a href=&#34;#cb11-19&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;scale_fill_gradientn&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Amount of Tracks&amp;quot;&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb11-20&#34;&gt;&lt;a href=&#34;#cb11-20&#34;&gt;&lt;/a&gt;                       &lt;span class=&#34;dt&#34;&gt;colours =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;c&lt;/span&gt;( &lt;span class=&#34;st&#34;&gt;&amp;quot;#6C5B7B&amp;quot;&lt;/span&gt;,&lt;span class=&#34;st&#34;&gt;&amp;quot;#C06C84&amp;quot;&lt;/span&gt;,&lt;span class=&#34;st&#34;&gt;&amp;quot;#F67280&amp;quot;&lt;/span&gt;,&lt;span class=&#34;st&#34;&gt;&amp;quot;#F8B195&amp;quot;&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-21&#34;&gt;&lt;a href=&#34;#cb11-21&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;co&#34;&gt;# mean gains per rigion&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-22&#34;&gt;&lt;a href=&#34;#cb11-22&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_point&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; region,&lt;/span&gt;
+&lt;span id=&#34;cb11-23&#34;&gt;&lt;a href=&#34;#cb11-23&#34;&gt;&lt;/a&gt;                 &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; mean_gain),&lt;/span&gt;
+&lt;span id=&#34;cb11-24&#34;&gt;&lt;a href=&#34;#cb11-24&#34;&gt;&lt;/a&gt;             &lt;span class=&#34;dt&#34;&gt;size =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;3&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb11-25&#34;&gt;&lt;a href=&#34;#cb11-25&#34;&gt;&lt;/a&gt;             &lt;span class=&#34;dt&#34;&gt;color =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;gray12&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-26&#34;&gt;&lt;a href=&#34;#cb11-26&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_segment&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;/span&gt;
+&lt;span id=&#34;cb11-27&#34;&gt;&lt;a href=&#34;#cb11-27&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; region,&lt;/span&gt;
+&lt;span id=&#34;cb11-28&#34;&gt;&lt;a href=&#34;#cb11-28&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;0&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb11-29&#34;&gt;&lt;a href=&#34;#cb11-29&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;xend =&lt;/span&gt; region,&lt;/span&gt;
+&lt;span id=&#34;cb11-30&#34;&gt;&lt;a href=&#34;#cb11-30&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;yend =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;3000&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-31&#34;&gt;&lt;a href=&#34;#cb11-31&#34;&gt;&lt;/a&gt;  ),&lt;/span&gt;
+&lt;span id=&#34;cb11-32&#34;&gt;&lt;a href=&#34;#cb11-32&#34;&gt;&lt;/a&gt;  &lt;span class=&#34;dt&#34;&gt;linetype =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;dashed&amp;quot;&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb11-33&#34;&gt;&lt;a href=&#34;#cb11-33&#34;&gt;&lt;/a&gt;  &lt;span class=&#34;dt&#34;&gt;color =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;grey12&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-34&#34;&gt;&lt;a href=&#34;#cb11-34&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;annotate&lt;/span&gt;(&lt;/span&gt;
+&lt;span id=&#34;cb11-35&#34;&gt;&lt;a href=&#34;#cb11-35&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;11&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb11-36&#34;&gt;&lt;a href=&#34;#cb11-36&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;3130&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb11-37&#34;&gt;&lt;a href=&#34;#cb11-37&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;label =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;Cummulative Length [FT]&amp;quot;&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb11-38&#34;&gt;&lt;a href=&#34;#cb11-38&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;geom =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb11-39&#34;&gt;&lt;a href=&#34;#cb11-39&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;size =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;2.5&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb11-40&#34;&gt;&lt;a href=&#34;#cb11-40&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;23&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb11-41&#34;&gt;&lt;a href=&#34;#cb11-41&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;family =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;playfair&amp;quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-42&#34;&gt;&lt;a href=&#34;#cb11-42&#34;&gt;&lt;/a&gt;  ) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-43&#34;&gt;&lt;a href=&#34;#cb11-43&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;annotate&lt;/span&gt;(&lt;/span&gt;
+&lt;span id=&#34;cb11-44&#34;&gt;&lt;a href=&#34;#cb11-44&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;11&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb11-45&#34;&gt;&lt;a href=&#34;#cb11-45&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1200&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb11-46&#34;&gt;&lt;a href=&#34;#cb11-46&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;label =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;Mean Elevation Gain&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;[FASL]&amp;quot;&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb11-47&#34;&gt;&lt;a href=&#34;#cb11-47&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;geom =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb11-48&#34;&gt;&lt;a href=&#34;#cb11-48&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;size =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;2.5&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb11-49&#34;&gt;&lt;a href=&#34;#cb11-49&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;-67.5&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb11-50&#34;&gt;&lt;a href=&#34;#cb11-50&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;family =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;playfair&amp;quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-51&#34;&gt;&lt;a href=&#34;#cb11-51&#34;&gt;&lt;/a&gt;  ) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-52&#34;&gt;&lt;a href=&#34;#cb11-52&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;co&#34;&gt;#annotate custom scale inside plot&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-53&#34;&gt;&lt;a href=&#34;#cb11-53&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;annotate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;11.7&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;1100&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;label =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;1000&amp;quot;&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;geom =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;color =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;gray12&amp;quot;&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;family =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;)&lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-54&#34;&gt;&lt;a href=&#34;#cb11-54&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;annotate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;11.7&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;2100&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;label =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;2000&amp;quot;&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;geom =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;color =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;gray12&amp;quot;&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;family =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;)&lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-55&#34;&gt;&lt;a href=&#34;#cb11-55&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;annotate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;11.7&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;3100&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;label =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;3000&amp;quot;&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;geom =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;color =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;gray12&amp;quot;&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;family =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-56&#34;&gt;&lt;a href=&#34;#cb11-56&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;scale_y_continuous&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;limits =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;c&lt;/span&gt;(&lt;span class=&#34;op&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;1500&lt;/span&gt;, &lt;span class=&#34;dv&#34;&gt;3500&lt;/span&gt;),&lt;/span&gt;
+&lt;span id=&#34;cb11-57&#34;&gt;&lt;a href=&#34;#cb11-57&#34;&gt;&lt;/a&gt;                     &lt;span class=&#34;dt&#34;&gt;expand =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;c&lt;/span&gt;(&lt;span class=&#34;dv&#34;&gt;0&lt;/span&gt;,&lt;span class=&#34;dv&#34;&gt;0&lt;/span&gt;),&lt;/span&gt;
+&lt;span id=&#34;cb11-58&#34;&gt;&lt;a href=&#34;#cb11-58&#34;&gt;&lt;/a&gt;                     &lt;span class=&#34;dt&#34;&gt;breaks =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;c&lt;/span&gt;(&lt;span class=&#34;dv&#34;&gt;0&lt;/span&gt;, &lt;span class=&#34;dv&#34;&gt;1000&lt;/span&gt;, &lt;span class=&#34;dv&#34;&gt;2000&lt;/span&gt;, &lt;span class=&#34;dv&#34;&gt;3000&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-59&#34;&gt;&lt;a href=&#34;#cb11-59&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;co&#34;&gt;#add title, subtitle &amp;amp; caption&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-60&#34;&gt;&lt;a href=&#34;#cb11-60&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;labs&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;title =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;Hiking Locations in Washington&amp;quot;&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb11-61&#34;&gt;&lt;a href=&#34;#cb11-61&#34;&gt;&lt;/a&gt;       &lt;span class=&#34;dt&#34;&gt;subtitle =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;paste&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;This Visualisation shows the cummulative length of tracks,&amp;quot;&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb11-62&#34;&gt;&lt;a href=&#34;#cb11-62&#34;&gt;&lt;/a&gt;                        &lt;span class=&#34;st&#34;&gt;&amp;quot;the amount of tracks and the mean gain in elevation per location.&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;&amp;quot;&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb11-63&#34;&gt;&lt;a href=&#34;#cb11-63&#34;&gt;&lt;/a&gt;                        &lt;span class=&#34;st&#34;&gt;&amp;quot;If you are an experienced hiker, you might want to go&amp;quot;&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb11-64&#34;&gt;&lt;a href=&#34;#cb11-64&#34;&gt;&lt;/a&gt;                        &lt;span class=&#34;st&#34;&gt;&amp;quot;to the North Cascades since there are a lot of tracks,&amp;quot;&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb11-65&#34;&gt;&lt;a href=&#34;#cb11-65&#34;&gt;&lt;/a&gt;                        &lt;span class=&#34;st&#34;&gt;&amp;quot;higher elevations and total length to overcome.&amp;quot;&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb11-66&#34;&gt;&lt;a href=&#34;#cb11-66&#34;&gt;&lt;/a&gt;                        &lt;span class=&#34;dt&#34;&gt;sep =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;&amp;quot;&lt;/span&gt;),&lt;/span&gt;
+&lt;span id=&#34;cb11-67&#34;&gt;&lt;a href=&#34;#cb11-67&#34;&gt;&lt;/a&gt;       &lt;span class=&#34;dt&#34;&gt;caption =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;\n\n&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;Data Visualisation by Tobias Stalder&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;Source: TidyX Crew (Ellis Hughes, Patrick Ward)&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;Edited by: Sajib Devnath&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;www.sajibdevnath.com&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-68&#34;&gt;&lt;a href=&#34;#cb11-68&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-69&#34;&gt;&lt;a href=&#34;#cb11-69&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;co&#34;&gt;#transform to polar coordinate system&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-70&#34;&gt;&lt;a href=&#34;#cb11-70&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;coord_polar&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;clip =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;off&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-71&#34;&gt;&lt;a href=&#34;#cb11-71&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt;(&lt;/span&gt;
+&lt;span id=&#34;cb11-72&#34;&gt;&lt;a href=&#34;#cb11-72&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;legend.position =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;bottom&amp;quot;&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb11-73&#34;&gt;&lt;a href=&#34;#cb11-73&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;axis.title =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_blank&lt;/span&gt;(),&lt;/span&gt;
+&lt;span id=&#34;cb11-74&#34;&gt;&lt;a href=&#34;#cb11-74&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;axis.ticks =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_blank&lt;/span&gt;(),&lt;/span&gt;
+&lt;span id=&#34;cb11-75&#34;&gt;&lt;a href=&#34;#cb11-75&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;axis.text.y =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_blank&lt;/span&gt;(),&lt;/span&gt;
+&lt;span id=&#34;cb11-76&#34;&gt;&lt;a href=&#34;#cb11-76&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;/span&gt;
+&lt;span id=&#34;cb11-77&#34;&gt;&lt;a href=&#34;#cb11-77&#34;&gt;&lt;/a&gt;      &lt;span class=&#34;dt&#34;&gt;color =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;gray12&amp;quot;&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb11-78&#34;&gt;&lt;a href=&#34;#cb11-78&#34;&gt;&lt;/a&gt;      &lt;span class=&#34;dt&#34;&gt;size =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;12&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-79&#34;&gt;&lt;a href=&#34;#cb11-79&#34;&gt;&lt;/a&gt;    ),&lt;/span&gt;
+&lt;span id=&#34;cb11-80&#34;&gt;&lt;a href=&#34;#cb11-80&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;panel.background =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_rect&lt;/span&gt;(&lt;/span&gt;
+&lt;span id=&#34;cb11-81&#34;&gt;&lt;a href=&#34;#cb11-81&#34;&gt;&lt;/a&gt;      &lt;span class=&#34;dt&#34;&gt;fill =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;white&amp;quot;&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb11-82&#34;&gt;&lt;a href=&#34;#cb11-82&#34;&gt;&lt;/a&gt;      &lt;span class=&#34;dt&#34;&gt;color =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;white&amp;quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-83&#34;&gt;&lt;a href=&#34;#cb11-83&#34;&gt;&lt;/a&gt;    ),&lt;/span&gt;
+&lt;span id=&#34;cb11-84&#34;&gt;&lt;a href=&#34;#cb11-84&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;panel.grid =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_blank&lt;/span&gt;(),&lt;/span&gt;
+&lt;span id=&#34;cb11-85&#34;&gt;&lt;a href=&#34;#cb11-85&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;panel.grid.major.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_blank&lt;/span&gt;(),&lt;/span&gt;
+&lt;span id=&#34;cb11-86&#34;&gt;&lt;a href=&#34;#cb11-86&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;text =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;/span&gt;
+&lt;span id=&#34;cb11-87&#34;&gt;&lt;a href=&#34;#cb11-87&#34;&gt;&lt;/a&gt;      &lt;span class=&#34;dt&#34;&gt;family =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;playfair&amp;quot;&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb11-88&#34;&gt;&lt;a href=&#34;#cb11-88&#34;&gt;&lt;/a&gt;      &lt;span class=&#34;dt&#34;&gt;color =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;grey12&amp;quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb11-89&#34;&gt;&lt;a href=&#34;#cb11-89&#34;&gt;&lt;/a&gt;    ),&lt;/span&gt;
+&lt;span id=&#34;cb11-90&#34;&gt;&lt;a href=&#34;#cb11-90&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;plot.title =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;/span&gt;
+&lt;span id=&#34;cb11-91&#34;&gt;&lt;a href=&#34;#cb11-91&#34;&gt;&lt;/a&gt;      &lt;span class=&#34;dt&#34;&gt;face =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;bold&amp;quot;&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb11-92&#34;&gt;&lt;a href=&#34;#cb11-92&#34;&gt;&lt;/a&gt;      &lt;span class=&#34;dt&#34;&gt;size =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;25&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb11-93&#34;&gt;&lt;a href=&#34;#cb11-93&#34;&gt;&lt;/a&gt;      &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;0.05&lt;/span&gt;),&lt;/span&gt;
+&lt;span id=&#34;cb11-94&#34;&gt;&lt;a href=&#34;#cb11-94&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;plot.subtitle =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;/span&gt;
+&lt;span id=&#34;cb11-95&#34;&gt;&lt;a href=&#34;#cb11-95&#34;&gt;&lt;/a&gt;      &lt;span class=&#34;dt&#34;&gt;size =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;14&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb11-96&#34;&gt;&lt;a href=&#34;#cb11-96&#34;&gt;&lt;/a&gt;      &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;0.05&lt;/span&gt;),&lt;/span&gt;
+&lt;span id=&#34;cb11-97&#34;&gt;&lt;a href=&#34;#cb11-97&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;plot.caption =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;/span&gt;
+&lt;span id=&#34;cb11-98&#34;&gt;&lt;a href=&#34;#cb11-98&#34;&gt;&lt;/a&gt;      &lt;span class=&#34;dt&#34;&gt;size =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;10&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb11-99&#34;&gt;&lt;a href=&#34;#cb11-99&#34;&gt;&lt;/a&gt;      &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)&lt;/span&gt;
+&lt;span id=&#34;cb11-100&#34;&gt;&lt;a href=&#34;#cb11-100&#34;&gt;&lt;/a&gt;  ) &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;images/1.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Saving the plot:&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb12&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;span id=&#34;cb12-1&#34;&gt;&lt;a href=&#34;#cb12-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;ggsave&lt;/span&gt;(&lt;/span&gt;
+&lt;span id=&#34;cb12-2&#34;&gt;&lt;a href=&#34;#cb12-2&#34;&gt;&lt;/a&gt;  &lt;span class=&#34;dt&#34;&gt;path =&lt;/span&gt; here&lt;span class=&#34;op&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;here&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;output&amp;quot;&lt;/span&gt;),&lt;/span&gt;
+&lt;span id=&#34;cb12-3&#34;&gt;&lt;a href=&#34;#cb12-3&#34;&gt;&lt;/a&gt;  &lt;span class=&#34;dt&#34;&gt;filename =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;1.pdf&amp;quot;&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb12-4&#34;&gt;&lt;a href=&#34;#cb12-4&#34;&gt;&lt;/a&gt;  &lt;span class=&#34;dt&#34;&gt;width =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;8.25&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb12-5&#34;&gt;&lt;a href=&#34;#cb12-5&#34;&gt;&lt;/a&gt;  &lt;span class=&#34;dt&#34;&gt;height =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;11.75&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb12-6&#34;&gt;&lt;a href=&#34;#cb12-6&#34;&gt;&lt;/a&gt;  &lt;span class=&#34;dt&#34;&gt;units =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;in&amp;quot;&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb12-7&#34;&gt;&lt;a href=&#34;#cb12-7&#34;&gt;&lt;/a&gt;  &lt;span class=&#34;dt&#34;&gt;dpi =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;300&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb12-8&#34;&gt;&lt;a href=&#34;#cb12-8&#34;&gt;&lt;/a&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Original Chart source: &lt;a href=&#34;https://github.com/toebR/Tidy-Tuesday/tree/master/hiking&#34;&gt;Tobias Stalder&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+        </item>
+        <item>
         <title>The Official Podcast Youtube Episode Data</title>
         <link>https://www.sajibdevnath.com/p/the-official-podcast-youtube-episode-data/</link>
         <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
