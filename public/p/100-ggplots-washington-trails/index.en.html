@@ -213,5 +213,39 @@ code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
 <span id="cb12-6"><a href="#cb12-6"></a>  <span class="dt">units =</span> <span class="st">&quot;in&quot;</span>,</span>
 <span id="cb12-7"><a href="#cb12-7"></a>  <span class="dt">dpi =</span> <span class="dv">300</span></span>
 <span id="cb12-8"><a href="#cb12-8"></a>)</span></code></pre></div>
-<p>Original Chart source: <a href="https://github.com/toebR/Tidy-Tuesday/tree/master/hiking">Tobias Stalder</a></p>
+</div>
+<div id="thinks-i-learned" class="section level2">
+<h2>Thinks I learned:</h2>
+<ol style="list-style-type: decimal">
+<li><code>str_wrap()</code> function - set the width of the text</li>
+<li><code>stringr::word()</code> select words from a sentence</li>
+</ol>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>sentences &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Jane saw -- a cat&quot;</span>, <span class="st">&quot;Jane sat -- down&quot;</span>)</span>
+<span id="cb13-2"><a href="#cb13-2"></a>stringr<span class="op">::</span><span class="kw">word</span>(sentences, <span class="dv">1</span>, <span class="dt">sep =</span> <span class="st">&quot; -- &quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;Jane saw&quot; &quot;Jane sat&quot;</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li><code>prismatic</code> package for color selection. Print colors in console.</li>
+</ol>
+<p><code>prismatic::color(c( "#6C5B7B" ,"#C06C84","#F67280","#F8B195"))</code></p>
+<div class="figure">
+<img src="images/%7B86CE9DBD-4B68-4643-91C6-63381BFEC63F%7D.png" alt="" />
+<p class="caption">Console</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li><code>scale_fill_gradientn()</code> selects a range of colors for gradient</li>
+</ol>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb15-2"><a href="#cb15-2"></a></span>
+<span id="cb15-3"><a href="#cb15-3"></a>diamonds <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb15-4"><a href="#cb15-4"></a><span class="st">  </span><span class="kw">group_by</span>(color) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb15-5"><a href="#cb15-5"></a><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">mean_price =</span> <span class="kw">mean</span>(price)) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb15-6"><a href="#cb15-6"></a><span class="st">  </span><span class="kw">ggplot</span>() <span class="op">+</span></span>
+<span id="cb15-7"><a href="#cb15-7"></a><span class="st">    </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="kw">aes</span>(<span class="dt">x =</span> color, <span class="dt">y =</span> mean_price, <span class="dt">fill =</span> mean_price)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb15-8"><a href="#cb15-8"></a><span class="st">    </span><span class="kw">scale_fill_gradientn</span>(<span class="st">&quot;Mean price&quot;</span>, <span class="dt">colours =</span> <span class="kw">c</span>(<span class="st">&quot;#6C5B7B&quot;</span>,<span class="st">&quot;#C06C84&quot;</span>,<span class="st">&quot;#F67280&quot;</span>,<span class="st">&quot;#F8B195&quot;</span>))</span></code></pre></div>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<p><img src="index.en_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<ol start="5" style="list-style-type: decimal">
+<li><code>coord_polar(clip = "off")</code> when text gets cuts off the chart</li>
+</ol>
+<p>Originally from : <a href="https://github.com/toebR/Tidy-Tuesday/tree/master/hiking">Tobias Stalder</a></p>
 </div>

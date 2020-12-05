@@ -197,4 +197,35 @@ ggsave(
 )
 ```
 
-Original Chart source: [Tobias Stalder](https://github.com/toebR/Tidy-Tuesday/tree/master/hiking ) 
+## Thinks I learned:
+1. `str_wrap()` function - set the width of the text
+2. `stringr::word()` select words from a sentence
+
+```{r}
+sentences <- c("Jane saw -- a cat", "Jane sat -- down")
+stringr::word(sentences, 1, sep = " -- ")
+```
+
+3. `prismatic` package for color selection. Print colors in console.
+
+`prismatic::color(c( "#6C5B7B" ,"#C06C84","#F67280","#F8B195"))`
+
+![Console](images/{86CE9DBD-4B68-4643-91C6-63381BFEC63F}.png)
+
+4. `scale_fill_gradientn()` selects a range of colors for gradient
+```{r}
+library(tidyverse)
+
+diamonds %>% 
+  group_by(color) %>% 
+  summarise(mean_price = mean(price)) %>% 
+  ggplot() +
+    geom_bar(stat = "identity", aes(x = color, y = mean_price, fill = mean_price)) + 
+    scale_fill_gradientn("Mean price", colours = c("#6C5B7B","#C06C84","#F67280","#F8B195"))
+```
+
+5. `coord_polar(clip = "off")` when text gets cuts off the chart
+
+
+
+Originally from : [Tobias Stalder](https://github.com/toebR/Tidy-Tuesday/tree/master/hiking ) 
