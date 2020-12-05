@@ -1,0 +1,148 @@
+---
+title: "#2 100-ggplots Race to the Finnish Line"
+author: Sajib Devnath
+date: '2020-12-05'
+slug: 100-ggplots-race-to-the-finnish-line
+image: images/2.png
+categories:
+  - Dataviz
+  - Learning
+  - 100-charts
+tags:
+  - ggplot2
+  - data-visualization
+output:
+  blogdown::html_page:
+    highlight: espresso
+---
+
+<script src="{{< relref "post/2020-12-05-100-ggplots-race-to-the-finnish-line/index.en.html" >}}index.en_files/accessible-code-block/empty-anchor.js"></script>
+<link href="{{< relref "post/2020-12-05-100-ggplots-race-to-the-finnish-line/index.en.html" >}}index.en_files/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="{{< relref "post/2020-12-05-100-ggplots-race-to-the-finnish-line/index.en.html" >}}index.en_files/anchor-sections/anchor-sections.js"></script>
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #2a211c;
+    color: #bdae9d;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #bdae9d;  padding-left: 4px; }
+div.sourceCode
+  { color: #bdae9d; background-color: #2a211c; }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ffff00; } /* Alert */
+code span.an { color: #0066ff; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #44aa43; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #43a8ed; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #049b0a; } /* Char */
+code span.cn { } /* Constant */
+code span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Comment */
+code span.do { color: #0066ff; font-style: italic; } /* Documentation */
+code span.dt { text-decoration: underline; } /* DataType */
+code span.dv { color: #44aa43; } /* DecVal */
+code span.er { color: #ffff00; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #44aa43; } /* Float */
+code span.fu { color: #ff9358; font-weight: bold; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #43a8ed; font-weight: bold; } /* Keyword */
+code span.op { } /* Operator */
+code span.pp { font-weight: bold; } /* Preprocessor */
+code span.sc { color: #049b0a; } /* SpecialChar */
+code span.ss { color: #049b0a; } /* SpecialString */
+code span.st { color: #049b0a; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #049b0a; } /* VerbatimString */
+code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+</style>
+
+
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="kw">library</span>(showtext)</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="kw">theme_set</span>(<span class="kw">theme_minimal</span>())</span>
+<span id="cb1-4"><a href="#cb1-4"></a></span>
+<span id="cb1-5"><a href="#cb1-5"></a>mobile &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&#39;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-11-10/mobile.csv&#39;</span>)</span>
+<span id="cb1-6"><a href="#cb1-6"></a>landline &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&#39;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-11-10/landline.csv&#39;</span>)</span>
+<span id="cb1-7"><a href="#cb1-7"></a></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="co"># wrapper function for annotation</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a>wrapper &lt;-<span class="st"> </span><span class="cf">function</span>(x, ...) <span class="kw">paste</span>(<span class="kw">strwrap</span>(x, ...), <span class="dt">collapse =</span> <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb1-10"><a href="#cb1-10"></a></span>
+<span id="cb1-11"><a href="#cb1-11"></a></span>
+<span id="cb1-12"><a href="#cb1-12"></a>a_one &lt;-<span class="st"> &quot;1992 saw Nokia change their focus to handheld phones as they released the Nokia 1011&quot;</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a>a_two &lt;-<span class="st"> &quot;In 1998 Finland became the first European country to obtain more subscriptions for Mobile Phones than Landlines. They were also the first High Income country to achieve this feat&quot;</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a>a_three &lt;-<span class="st"> &quot;In 2007 Nokia released the N95, a high-end smartphone. Unfortunately for them, the iPhone was released the following year, seeing huge sales worldwide&quot;</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a>a_four &lt;-<span class="st"> &quot;After struggling to keep up with competitors, Nokia announced 14,000 job losses in 2012 and the closing of the last factory in Finland&quot;</span></span>
+<span id="cb1-16"><a href="#cb1-16"></a>a_five &lt;-<span class="st"> &quot;In 2017 landline subscriptions dropped to just 7 per 100 people. At the beginning of 2019 Telia, one of Finland&#39;s largest landline providers, announced it would be stopping its landline services&quot;</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a></span>
+<span id="cb1-18"><a href="#cb1-18"></a></span>
+<span id="cb1-19"><a href="#cb1-19"></a>plot_data &lt;-<span class="st"> </span>landline <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb1-20"><a href="#cb1-20"></a><span class="st">  </span><span class="kw">filter</span>(entity <span class="op">==</span><span class="st"> &quot;Finland&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb1-21"><a href="#cb1-21"></a><span class="st">  </span><span class="kw">inner_join</span>(mobile, <span class="dt">by =</span> <span class="kw">c</span>(<span class="st">&quot;year&quot;</span>, <span class="st">&quot;code&quot;</span>), <span class="dt">suffix =</span> <span class="kw">c</span>(<span class="st">&quot;_land&quot;</span>, <span class="st">&quot;_mob&quot;</span>)) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb1-22"><a href="#cb1-22"></a><span class="st">  </span><span class="kw">pivot_longer</span>(<span class="dt">cols =</span> <span class="kw">c</span>(<span class="st">&quot;mobile_subs&quot;</span>, <span class="st">&quot;landline_subs&quot;</span>), </span>
+<span id="cb1-23"><a href="#cb1-23"></a>               <span class="dt">values_to =</span> <span class="st">&quot;subs&quot;</span>,</span>
+<span id="cb1-24"><a href="#cb1-24"></a>               <span class="dt">names_to =</span> <span class="st">&quot;phone_type&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">font_add_google</span>(<span class="st">&quot;PT Sans Narrow&quot;</span>, <span class="st">&quot;pt-sans&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">showtext_auto</span>()</span>
+<span id="cb3-2"><a href="#cb3-2"></a></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="kw">ggplot</span>(plot_data, <span class="kw">aes</span>(<span class="dt">x =</span> year, <span class="dt">y =</span> subs)) <span class="op">+</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">color =</span> phone_type), <span class="dt">size =</span> <span class="fl">1.5</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="st">  </span><span class="kw">geom_area</span>(<span class="kw">aes</span>(<span class="dt">fill =</span> phone_type), <span class="dt">alpha =</span> <span class="fl">0.4</span>, <span class="dt">position =</span> <span class="st">&quot;dodge&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="st">  </span><span class="kw">scale_color_manual</span>(<span class="dt">values =</span> <span class="kw">c</span>(<span class="st">&quot;grey90&quot;</span>, <span class="st">&quot;#002f6c&quot;</span>),</span>
+<span id="cb3-7"><a href="#cb3-7"></a>                     <span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">&quot;Landline&quot;</span>, <span class="st">&quot;Mobile&quot;</span>)) <span class="op">+</span></span>
+<span id="cb3-8"><a href="#cb3-8"></a><span class="st">  </span><span class="kw">scale_fill_manual</span>(<span class="dt">values =</span> <span class="kw">c</span>(<span class="st">&quot;grey85&quot;</span>, <span class="st">&quot;#002f6c&quot;</span>),</span>
+<span id="cb3-9"><a href="#cb3-9"></a>                    <span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">&quot;Landline&quot;</span>, <span class="st">&quot;Mobile&quot;</span>)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb3-10"><a href="#cb3-10"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">&quot;Race to The Finnish Line&quot;</span>,</span>
+<span id="cb3-11"><a href="#cb3-11"></a>       <span class="dt">subtitle =</span> <span class="st">&quot;How the rise of Nokia saw the fall of the landline, and the rise of smartphones saw the fall of Nokia&quot;</span>,</span>
+<span id="cb3-12"><a href="#cb3-12"></a>       <span class="dt">caption =</span> <span class="st">&quot;Source | https://ourworldindata.org/technology-adoption</span><span class="ch">\n</span><span class="st">Twitter | @henrywrover2</span><span class="ch">\n</span><span class="st">Github | henrywrover</span><span class="ch">\n</span><span class="st"> 11th November 2020&quot;</span>,</span>
+<span id="cb3-13"><a href="#cb3-13"></a>       <span class="dt">x =</span> <span class="st">&quot;Year&quot;</span>,</span>
+<span id="cb3-14"><a href="#cb3-14"></a>       <span class="dt">y =</span> <span class="st">&quot;Number of Subscriptions per 100 People&quot;</span>,</span>
+<span id="cb3-15"><a href="#cb3-15"></a>       <span class="dt">color =</span> <span class="st">&quot;Phone Type&quot;</span>,</span>
+<span id="cb3-16"><a href="#cb3-16"></a>       <span class="dt">fill =</span> <span class="st">&quot;Phone Type&quot;</span>) <span class="op">+</span></span>
+<span id="cb3-17"><a href="#cb3-17"></a><span class="st">  </span><span class="kw">scale_x_continuous</span>(<span class="dt">breaks =</span> <span class="dv">1990</span><span class="op">:</span><span class="dv">2017</span>) <span class="op">+</span></span>
+<span id="cb3-18"><a href="#cb3-18"></a><span class="st">  </span><span class="kw">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="dt">x =</span> <span class="fl">1992.1</span>, <span class="dt">y =</span> <span class="dv">25</span>, <span class="dt">label =</span> <span class="kw">wrapper</span>(a_one, <span class="dt">width =</span> <span class="dv">50</span>), <span class="dt">size =</span> <span class="dv">4</span>) <span class="op">+</span></span>
+<span id="cb3-19"><a href="#cb3-19"></a><span class="st">  </span><span class="kw">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="dt">x =</span> <span class="fl">1995.6</span>, <span class="dt">y =</span> <span class="dv">70</span>, <span class="dt">label =</span> <span class="kw">wrapper</span>(a_two, <span class="dt">width =</span> <span class="dv">50</span>), <span class="dt">size =</span> <span class="dv">4</span>) <span class="op">+</span></span>
+<span id="cb3-20"><a href="#cb3-20"></a><span class="st">  </span><span class="kw">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="dt">x =</span> <span class="fl">2003.7</span>, <span class="dt">y =</span> <span class="dv">120</span>, <span class="dt">label =</span> <span class="kw">wrapper</span>(a_three, <span class="dt">width =</span> <span class="dv">50</span>), <span class="dt">size =</span> <span class="dv">4</span>) <span class="op">+</span></span>
+<span id="cb3-21"><a href="#cb3-21"></a><span class="st">  </span><span class="kw">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="dt">x =</span> <span class="fl">2015.3</span>, <span class="dt">y =</span> <span class="dv">165</span>, <span class="dt">label =</span> <span class="kw">wrapper</span>(a_four, <span class="dt">width =</span> <span class="dv">35</span>), <span class="dt">size =</span> <span class="dv">4</span>) <span class="op">+</span></span>
+<span id="cb3-22"><a href="#cb3-22"></a><span class="st">  </span><span class="kw">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="dt">x =</span> <span class="dv">2014</span>, <span class="dt">y =</span> <span class="dv">30</span>, <span class="dt">label =</span> <span class="kw">wrapper</span>(a_five, <span class="dt">width =</span> <span class="dv">60</span>), <span class="dt">size =</span> <span class="dv">4</span>) <span class="op">+</span></span>
+<span id="cb3-23"><a href="#cb3-23"></a><span class="st">  </span><span class="kw">theme</span>(</span>
+<span id="cb3-24"><a href="#cb3-24"></a>    <span class="dt">legend.position =</span> <span class="st">&quot;bottom&quot;</span>,</span>
+<span id="cb3-25"><a href="#cb3-25"></a>    <span class="dt">text =</span> <span class="kw">element_text</span>(<span class="dt">family =</span> <span class="st">&quot;pt-sans&quot;</span>, <span class="dt">size =</span> <span class="dv">15</span>),</span>
+<span id="cb3-26"><a href="#cb3-26"></a>    <span class="dt">axis.text.x =</span> <span class="kw">element_text</span>(<span class="dt">size =</span> <span class="dv">10</span>),</span>
+<span id="cb3-27"><a href="#cb3-27"></a>    <span class="dt">plot.title =</span> <span class="kw">element_text</span>(<span class="dt">size =</span> <span class="dv">50</span>, <span class="dt">color =</span> <span class="st">&quot;#002f6c&quot;</span>, <span class="dt">face =</span> <span class="st">&quot;bold&quot;</span>),</span>
+<span id="cb3-28"><a href="#cb3-28"></a>    <span class="dt">plot.subtitle =</span> <span class="kw">element_text</span>(<span class="dt">size =</span> <span class="dv">30</span>, <span class="dt">color =</span> <span class="st">&quot;#002f6c&quot;</span>),</span>
+<span id="cb3-29"><a href="#cb3-29"></a>    <span class="dt">plot.caption =</span> <span class="kw">element_text</span>(<span class="dt">size =</span> <span class="dv">12</span>),</span>
+<span id="cb3-30"><a href="#cb3-30"></a>    <span class="dt">legend.text =</span> <span class="kw">element_text</span>(<span class="dt">size =</span> <span class="dv">10</span>),</span>
+<span id="cb3-31"><a href="#cb3-31"></a>    <span class="dt">legend.title =</span> <span class="kw">element_text</span>(<span class="dt">size =</span> <span class="dv">14</span>),</span>
+<span id="cb3-32"><a href="#cb3-32"></a>    <span class="dt">panel.grid =</span> <span class="kw">element_blank</span>(),</span>
+<span id="cb3-33"><a href="#cb3-33"></a>    <span class="dt">plot.margin =</span> <span class="kw">margin</span>(<span class="dv">25</span>, <span class="dv">25</span>, <span class="dv">25</span>, <span class="dv">25</span>)</span>
+<span id="cb3-34"><a href="#cb3-34"></a>  )</span></code></pre></div>
+<p><img src="images/2.png" /></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">ggsave</span>(<span class="st">&quot;2.pdf&quot;</span>, <span class="dt">plot =</span> <span class="kw">last_plot</span>(), <span class="dt">path =</span> here<span class="op">::</span><span class="kw">here</span>(), <span class="dt">width =</span> <span class="dv">16</span>, <span class="dt">height =</span> <span class="dv">12</span>)</span></code></pre></div>
