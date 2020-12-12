@@ -6,7 +6,138 @@
         <description>Recent content on Sajib Devnath</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 05 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.sajibdevnath.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 12 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.sajibdevnath.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>#3 100-ggplots Himalayan Climbing Expeditions</title>
+        <link>https://www.sajibdevnath.com/p/3-100-ggplots-himalayan-climbing-expeditions/</link>
+        <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.sajibdevnath.com/p/3-100-ggplots-himalayan-climbing-expeditions/</guid>
+        <description>&lt;img src="https://www.sajibdevnath.com/p/3-100-ggplots-himalayan-climbing-expeditions/images/3.png" alt="Featured image of post #3 100-ggplots Himalayan Climbing Expeditions" /&gt;
+&lt;script src=&#34;https://www.sajibdevnath.com/p/3-100-ggplots-himalayan-climbing-expeditions/index.en_files/accessible-code-block/empty-anchor.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://www.sajibdevnath.com/p/3-100-ggplots-himalayan-climbing-expeditions/index.en_files/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://www.sajibdevnath.com/p/3-100-ggplots-himalayan-climbing-expeditions/index.en_files/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;style type=&#34;text/css&#34;&gt;
+code.sourceCode &gt; span { display: inline-block; line-height: 1.25; }
+code.sourceCode &gt; span { color: inherit; text-decoration: inherit; }
+code.sourceCode &gt; span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode &gt; span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code &gt; span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code &gt; span &gt; a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #2a211c;
+    color: #bdae9d;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #bdae9d;  padding-left: 4px; }
+div.sourceCode
+  { color: #bdae9d; background-color: #2a211c; }
+@media screen {
+code.sourceCode &gt; span &gt; a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ffff00; } /* Alert */
+code span.an { color: #0066ff; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #44aa43; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #43a8ed; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #049b0a; } /* Char */
+code span.cn { } /* Constant */
+code span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Comment */
+code span.do { color: #0066ff; font-style: italic; } /* Documentation */
+code span.dt { text-decoration: underline; } /* DataType */
+code span.dv { color: #44aa43; } /* DecVal */
+code span.er { color: #ffff00; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #44aa43; } /* Float */
+code span.fu { color: #ff9358; font-weight: bold; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #43a8ed; font-weight: bold; } /* Keyword */
+code span.op { } /* Operator */
+code span.pp { font-weight: bold; } /* Preprocessor */
+code span.sc { color: #049b0a; } /* SpecialChar */
+code span.ss { color: #049b0a; } /* SpecialString */
+code span.st { color: #049b0a; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #049b0a; } /* VerbatimString */
+code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+&lt;/style&gt;
+
+
+&lt;p&gt;Packages:&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb1&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;span id=&#34;cb1-1&#34;&gt;&lt;a href=&#34;#cb1-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;library&lt;/span&gt;(tidyverse)&lt;/span&gt;
+&lt;span id=&#34;cb1-2&#34;&gt;&lt;a href=&#34;#cb1-2&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;library&lt;/span&gt;(showtext)&lt;/span&gt;
+&lt;span id=&#34;cb1-3&#34;&gt;&lt;a href=&#34;#cb1-3&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;library&lt;/span&gt;(ggtext)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Adding font:&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb2&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;span id=&#34;cb2-1&#34;&gt;&lt;a href=&#34;#cb2-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;font_add_google&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Fjalla One&amp;quot;&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;family =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;fone&amp;quot;&lt;/span&gt;)&lt;/span&gt;
+&lt;span id=&#34;cb2-2&#34;&gt;&lt;a href=&#34;#cb2-2&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;showtext_auto&lt;/span&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Data:&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb3&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;span id=&#34;cb3-1&#34;&gt;&lt;a href=&#34;#cb3-1&#34;&gt;&lt;/a&gt;tt &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;tidytuesdayR&lt;span class=&#34;op&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;tt_load&lt;/span&gt;(&lt;span class=&#34;dv&#34;&gt;2020&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;week =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;39&lt;/span&gt;)&lt;/span&gt;
+&lt;span id=&#34;cb3-2&#34;&gt;&lt;a href=&#34;#cb3-2&#34;&gt;&lt;/a&gt;peaks &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;tt&lt;span class=&#34;op&#34;&gt;$&lt;/span&gt;peaks&lt;/span&gt;
+&lt;span id=&#34;cb3-3&#34;&gt;&lt;a href=&#34;#cb3-3&#34;&gt;&lt;/a&gt;members &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;tt&lt;span class=&#34;op&#34;&gt;$&lt;/span&gt;members&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Wrangle the data:&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb4&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;span id=&#34;cb4-1&#34;&gt;&lt;a href=&#34;#cb4-1&#34;&gt;&lt;/a&gt;peaks_tidy &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;members &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb4-2&#34;&gt;&lt;a href=&#34;#cb4-2&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;group_by&lt;/span&gt;(peak_name) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb4-3&#34;&gt;&lt;a href=&#34;#cb4-3&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;summarise&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;n =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;n&lt;/span&gt;(),&lt;/span&gt;
+&lt;span id=&#34;cb4-4&#34;&gt;&lt;a href=&#34;#cb4-4&#34;&gt;&lt;/a&gt;            &lt;span class=&#34;dt&#34;&gt;success =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;sum&lt;/span&gt;(success),&lt;/span&gt;
+&lt;span id=&#34;cb4-5&#34;&gt;&lt;a href=&#34;#cb4-5&#34;&gt;&lt;/a&gt;            &lt;span class=&#34;dt&#34;&gt;fail =&lt;/span&gt; n &lt;span class=&#34;op&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;success) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb4-6&#34;&gt;&lt;a href=&#34;#cb4-6&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ungroup&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb4-7&#34;&gt;&lt;a href=&#34;#cb4-7&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;pivot_longer&lt;/span&gt;(success&lt;span class=&#34;op&#34;&gt;:&lt;/span&gt;fail, &lt;span class=&#34;st&#34;&gt;&amp;quot;success&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb4-8&#34;&gt;&lt;a href=&#34;#cb4-8&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;peak_name =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;str_to_upper&lt;/span&gt;(peak_name) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;fct_reorder&lt;/span&gt;(n)) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb4-9&#34;&gt;&lt;a href=&#34;#cb4-9&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;arrange&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;desc&lt;/span&gt;(n)) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb4-10&#34;&gt;&lt;a href=&#34;#cb4-10&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;slice_head&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;n =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;40&lt;/span&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Visualizing:&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb5&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;span id=&#34;cb5-1&#34;&gt;&lt;a href=&#34;#cb5-1&#34;&gt;&lt;/a&gt;peaks_tidy &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb5-2&#34;&gt;&lt;a href=&#34;#cb5-2&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(value, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; peak_name, &lt;span class=&#34;dt&#34;&gt;color =&lt;/span&gt; success, &lt;span class=&#34;dt&#34;&gt;group =&lt;/span&gt; peak_name)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb5-3&#34;&gt;&lt;a href=&#34;#cb5-3&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_point&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;size =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;4&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;stroke =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;shape =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;18&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb5-4&#34;&gt;&lt;a href=&#34;#cb5-4&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_line&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;size =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;color =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;grey30&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb5-5&#34;&gt;&lt;a href=&#34;#cb5-5&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;scale_x_log10&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb5-6&#34;&gt;&lt;a href=&#34;#cb5-6&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;scale_color_manual&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;values =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;c&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;firebrick&amp;quot;&lt;/span&gt;, &lt;span class=&#34;st&#34;&gt;&amp;quot;navy&amp;quot;&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb5-7&#34;&gt;&lt;a href=&#34;#cb5-7&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;labs&lt;/span&gt;(&lt;/span&gt;
+&lt;span id=&#34;cb5-8&#34;&gt;&lt;a href=&#34;#cb5-8&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb5-9&#34;&gt;&lt;a href=&#34;#cb5-9&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb5-10&#34;&gt;&lt;a href=&#34;#cb5-10&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;title =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;MOST POPULAR TWENTY &amp;lt;span style=&amp;#39;color:lightsteelblue&amp;#39;&amp;gt;PEAKS&amp;lt;/span&amp;gt;&amp;quot;&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb5-11&#34;&gt;&lt;a href=&#34;#cb5-11&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;subtitle =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;How many mountain climbers have &amp;lt;span style=&amp;#39;color:navy&amp;#39;&amp;gt;succeeded&amp;lt;/span&amp;gt; or &amp;lt;span style=&amp;#39;color:firebrick&amp;#39;&amp;gt;failed&amp;lt;/span&amp;gt; &amp;lt;br&amp;gt; with their attempted on the most popular twenty &amp;lt;span style=&amp;#39;color:black&amp;#39;&amp;gt;Himalayan&amp;lt;/span&amp;gt; peaks&amp;quot;&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb5-12&#34;&gt;&lt;a href=&#34;#cb5-12&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;caption =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; Data: himalayandatabase.com&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb5-13&#34;&gt;&lt;a href=&#34;#cb5-13&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;    Visualization by @botanagin&amp;quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb5-14&#34;&gt;&lt;a href=&#34;#cb5-14&#34;&gt;&lt;/a&gt;  ) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb5-15&#34;&gt;&lt;a href=&#34;#cb5-15&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme_minimal&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb5-16&#34;&gt;&lt;a href=&#34;#cb5-16&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt;(&lt;/span&gt;
+&lt;span id=&#34;cb5-17&#34;&gt;&lt;a href=&#34;#cb5-17&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;text =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;family =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;fone&amp;quot;&lt;/span&gt;),&lt;/span&gt;
+&lt;span id=&#34;cb5-18&#34;&gt;&lt;a href=&#34;#cb5-18&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;legend.position =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;none&amp;quot;&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb5-19&#34;&gt;&lt;a href=&#34;#cb5-19&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;plot.subtitle =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_markdown&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;size =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;14&lt;/span&gt;),&lt;/span&gt;
+&lt;span id=&#34;cb5-20&#34;&gt;&lt;a href=&#34;#cb5-20&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;plot.title =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_markdown&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;size =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;20&lt;/span&gt;),&lt;/span&gt;
+&lt;span id=&#34;cb5-21&#34;&gt;&lt;a href=&#34;#cb5-21&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;plot.caption =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;size =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;8&lt;/span&gt;),&lt;/span&gt;
+&lt;span id=&#34;cb5-22&#34;&gt;&lt;a href=&#34;#cb5-22&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;axis.text =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;size =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;10&lt;/span&gt;),&lt;/span&gt;
+&lt;span id=&#34;cb5-23&#34;&gt;&lt;a href=&#34;#cb5-23&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;plot.margin =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;margin&lt;/span&gt;(&lt;span class=&#34;dv&#34;&gt;40&lt;/span&gt;, &lt;span class=&#34;dv&#34;&gt;40&lt;/span&gt;, &lt;span class=&#34;dv&#34;&gt;20&lt;/span&gt;, &lt;span class=&#34;dv&#34;&gt;20&lt;/span&gt;)&lt;/span&gt;
+&lt;span id=&#34;cb5-24&#34;&gt;&lt;a href=&#34;#cb5-24&#34;&gt;&lt;/a&gt;  )&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;images/3.png&#34; /&gt;
+Saving the plot:&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb6&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;span id=&#34;cb6-1&#34;&gt;&lt;a href=&#34;#cb6-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;ggsave&lt;/span&gt;(here&lt;span class=&#34;op&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;here&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;output&amp;quot;&lt;/span&gt;, &lt;span class=&#34;st&#34;&gt;&amp;quot;2020-w39-himalayanclimbing.pdf&amp;quot;&lt;/span&gt;), &lt;/span&gt;
+&lt;span id=&#34;cb6-2&#34;&gt;&lt;a href=&#34;#cb6-2&#34;&gt;&lt;/a&gt;       &lt;span class=&#34;dt&#34;&gt;plot =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;last_plot&lt;/span&gt;(),&lt;/span&gt;
+&lt;span id=&#34;cb6-3&#34;&gt;&lt;a href=&#34;#cb6-3&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;height =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;9&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;width =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;7&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;units =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;in&amp;quot;&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;dpi =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;300&lt;/span&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Original: &lt;a href=&#34;https://github.com/botan/tidytuesday/blob/main/R/2020-w39-himalayanclimbing.Rmd&#34;&gt;Botan Ağın&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>#2 100-ggplots Race to the Finnish Line</title>
         <link>https://www.sajibdevnath.com/p/100-ggplots-race-to-the-finnish-line/</link>
         <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
