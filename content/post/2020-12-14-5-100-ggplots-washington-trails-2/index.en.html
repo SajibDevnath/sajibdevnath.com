@@ -1,0 +1,214 @@
+---
+title: "#5 100-ggplots Washington Trails 2"
+author: Sajib Devnath
+date: '2020-12-14'
+slug: 5-100-ggplots-washington-trails-2
+image: 5.png
+categories:
+  - Dataviz
+  - Learning
+  - 100-charts
+tags:
+  - ggplot2
+  - data-visualization
+output:
+  blogdown::html_page:
+    highlight: espresso
+---
+
+<script src="{{< relref "post/2020-12-14-5-100-ggplots-washington-trails-2/index.en.html" >}}index.en_files/accessible-code-block/empty-anchor.js"></script>
+<link href="{{< relref "post/2020-12-14-5-100-ggplots-washington-trails-2/index.en.html" >}}index.en_files/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="{{< relref "post/2020-12-14-5-100-ggplots-washington-trails-2/index.en.html" >}}index.en_files/anchor-sections/anchor-sections.js"></script>
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #2a211c;
+    color: #bdae9d;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #bdae9d;  padding-left: 4px; }
+div.sourceCode
+  { color: #bdae9d; background-color: #2a211c; }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ffff00; } /* Alert */
+code span.an { color: #0066ff; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #44aa43; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #43a8ed; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #049b0a; } /* Char */
+code span.cn { } /* Constant */
+code span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Comment */
+code span.do { color: #0066ff; font-style: italic; } /* Documentation */
+code span.dt { text-decoration: underline; } /* DataType */
+code span.dv { color: #44aa43; } /* DecVal */
+code span.er { color: #ffff00; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #44aa43; } /* Float */
+code span.fu { color: #ff9358; font-weight: bold; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #43a8ed; font-weight: bold; } /* Keyword */
+code span.op { } /* Operator */
+code span.pp { font-weight: bold; } /* Preprocessor */
+code span.sc { color: #049b0a; } /* SpecialChar */
+code span.ss { color: #049b0a; } /* SpecialString */
+code span.st { color: #049b0a; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #049b0a; } /* VerbatimString */
+code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+</style>
+
+
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="kw">library</span>(ggtext)</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="kw">library</span>(ggimage)</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="kw">library</span>(showtext)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">font_add_google</span>(<span class="dt">name =</span> <span class="st">&quot;Fira Sans&quot;</span>, <span class="dt">family =</span> <span class="st">&quot;fira&quot;</span>)</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="kw">font_add_google</span>(<span class="dt">name =</span> <span class="st">&quot;Ubuntu&quot;</span>, <span class="dt">family =</span> <span class="st">&quot;Ubuntu&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>hike_data &lt;-<span class="st"> </span>readr<span class="op">::</span><span class="kw">read_rds</span>(<span class="kw">url</span>(<span class="st">&#39;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-11-24/hike_data.rds&#39;</span>))</span></code></pre></div>
+<p>Filter the data for 5 star rating:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>top_hikes &lt;-<span class="st"> </span>hike_data <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="st">  </span><span class="kw">filter</span>(rating <span class="op">==</span><span class="st"> &quot;5.00&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>img &lt;-<span class="st"> </span><span class="kw">c</span>(</span>
+<span id="cb5-2"><a href="#cb5-2"></a>  here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;img&quot;</span>, <span class="st">&quot;washington_hikes&quot;</span>, <span class="st">&quot;dog.png&quot;</span>),</span>
+<span id="cb5-3"><a href="#cb5-3"></a>  here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;img&quot;</span>, <span class="st">&quot;washington_hikes&quot;</span>, <span class="st">&quot;flower.png&quot;</span>),</span>
+<span id="cb5-4"><a href="#cb5-4"></a>  here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;img&quot;</span>, <span class="st">&quot;washington_hikes&quot;</span>, <span class="st">&quot;kids.png&quot;</span>),</span>
+<span id="cb5-5"><a href="#cb5-5"></a>  here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;img&quot;</span>, <span class="st">&quot;washington_hikes&quot;</span>, <span class="st">&quot;mountains.png&quot;</span>),</span>
+<span id="cb5-6"><a href="#cb5-6"></a>  here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;img&quot;</span>, <span class="st">&quot;washington_hikes&quot;</span>, <span class="st">&quot;ridges.png&quot;</span>),</span>
+<span id="cb5-7"><a href="#cb5-7"></a>  here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;img&quot;</span>, <span class="st">&quot;washington_hikes&quot;</span>, <span class="st">&quot;summits.png&quot;</span>)</span>
+<span id="cb5-8"><a href="#cb5-8"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>feature_split &lt;-<span class="st"> </span>top_hikes <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="st">  </span><span class="kw">select</span>(features) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="st">  </span><span class="kw">unlist</span>() <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="st">  </span><span class="kw">unique</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>top_features &lt;-<span class="st"> </span>feature_split <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="st">  </span><span class="kw">map_df</span>(<span class="cf">function</span> (x){</span>
+<span id="cb7-3"><a href="#cb7-3"></a>    <span class="kw">data.frame</span>(</span>
+<span id="cb7-4"><a href="#cb7-4"></a>      <span class="dt">features =</span> x,</span>
+<span id="cb7-5"><a href="#cb7-5"></a>      <span class="dt">count =</span> <span class="kw">sum</span>(<span class="kw">str_detect</span>(top_hikes<span class="op">$</span>features, x))</span>
+<span id="cb7-6"><a href="#cb7-6"></a>    )</span>
+<span id="cb7-7"><a href="#cb7-7"></a>  }) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb7-8"><a href="#cb7-8"></a><span class="st">  </span><span class="kw">as.tibble</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>top_list =<span class="st"> </span><span class="kw">list</span>()</span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(feature_split)){</span>
+<span id="cb8-3"><a href="#cb8-3"></a>  top_list[[i]] =<span class="st"> </span><span class="kw">sum</span>(<span class="kw">str_count</span>(top_hikes<span class="op">$</span>features, </span>
+<span id="cb8-4"><a href="#cb8-4"></a>                      feature_split[i]))</span>
+<span id="cb8-5"><a href="#cb8-5"></a>}</span>
+<span id="cb8-6"><a href="#cb8-6"></a><span class="kw">names</span>(top_list) =<span class="st"> </span>feature_split</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>df_top_list =<span class="st"> </span><span class="kw">t</span>(<span class="kw">data.frame</span>(top_list)) <span class="op">%&gt;%</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="st">  </span><span class="kw">as_tibble</span>() <span class="op">%&gt;%</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">feature_name =</span> <span class="kw">row.names</span>(.),</span>
+<span id="cb9-4"><a href="#cb9-4"></a>         <span class="dt">feature_name_clean =</span> feature_split,</span>
+<span id="cb9-5"><a href="#cb9-5"></a>         <span class="dt">count =</span> <span class="kw">as.numeric</span>(top_list),</span>
+<span id="cb9-6"><a href="#cb9-6"></a>         <span class="dt">percentage =</span> <span class="kw">round</span>(count <span class="op">/</span><span class="st"> </span><span class="dv">68</span> <span class="op">*</span><span class="st"> </span><span class="dv">100</span>, <span class="dv">0</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a><span class="st">  </span><span class="kw">arrange</span>(<span class="op">-</span>count) <span class="op">%&gt;%</span></span>
+<span id="cb9-8"><a href="#cb9-8"></a><span class="st">  </span><span class="kw">slice</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">6</span>) <span class="op">%&gt;%</span></span>
+<span id="cb9-9"><a href="#cb9-9"></a><span class="st">  </span><span class="kw">select</span>(feature_name_clean, count, percentage) <span class="op">%&gt;%</span></span>
+<span id="cb9-10"><a href="#cb9-10"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">images =</span> <span class="kw">c</span>(img[<span class="dv">4</span>], img[<span class="dv">1</span>], img[<span class="dv">2</span>],</span>
+<span id="cb9-11"><a href="#cb9-11"></a>                    img[<span class="dv">5</span>], img[<span class="dv">3</span>], img[<span class="dv">6</span>]),</span>
+<span id="cb9-12"><a href="#cb9-12"></a>         <span class="dt">label_name =</span> <span class="kw">paste0</span>(feature_name_clean, <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>, count, <span class="st">&quot; Trails&quot;</span>))</span>
+<span id="cb9-13"><a href="#cb9-13"></a>df_top_list<span class="op">$</span>label_name =<span class="st"> </span>forcats<span class="op">::</span><span class="kw">fct_reorder</span>(df_top_list<span class="op">$</span>label_name, df_top_list<span class="op">$</span>percentage)</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>df_top_features &lt;-<span class="st"> </span>top_features <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">percentage =</span> <span class="kw">round</span>((count <span class="op">/</span><span class="st"> </span><span class="dv">68</span>) <span class="op">*</span><span class="st"> </span><span class="dv">100</span>),</span>
+<span id="cb10-3"><a href="#cb10-3"></a>         <span class="dt">label =</span> <span class="kw">paste0</span>(features, <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>, count,<span class="st">&quot; Trails&quot;</span>)) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb10-4"><a href="#cb10-4"></a><span class="st">  </span><span class="kw">arrange</span>(<span class="op">-</span>count) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb10-5"><a href="#cb10-5"></a><span class="st">  </span><span class="kw">slice</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">6</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb10-6"><a href="#cb10-6"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">images =</span> <span class="kw">c</span>(img[<span class="dv">4</span>], img[<span class="dv">1</span>], img[<span class="dv">2</span>],</span>
+<span id="cb10-7"><a href="#cb10-7"></a>                    img[<span class="dv">5</span>], img[<span class="dv">3</span>], img[<span class="dv">6</span>])) </span>
+<span id="cb10-8"><a href="#cb10-8"></a>df_top_features<span class="op">$</span>label &lt;-<span class="st"> </span>forcats<span class="op">::</span><span class="kw">fct_reorder</span>(df_top_features<span class="op">$</span>label, df_top_features<span class="op">$</span>percentage)</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="kw">showtext_auto</span>()</span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="kw">ggplot</span>(df_top_features) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="st">    </span><span class="kw">geom_image</span>(<span class="kw">aes</span>(<span class="dt">x =</span> <span class="dv">0</span>,</span>
+<span id="cb11-4"><a href="#cb11-4"></a>                   <span class="dt">y =</span> <span class="dv">50</span>,</span>
+<span id="cb11-5"><a href="#cb11-5"></a>                   <span class="dt">image =</span> images),</span>
+<span id="cb11-6"><a href="#cb11-6"></a>               <span class="dt">size =</span> <span class="fl">.4</span>) <span class="op">+</span></span>
+<span id="cb11-7"><a href="#cb11-7"></a><span class="st">    </span><span class="kw">geom_text</span>(</span>
+<span id="cb11-8"><a href="#cb11-8"></a>      <span class="kw">aes</span>(<span class="dt">x =</span> percentage <span class="op">+</span><span class="st"> </span><span class="dv">2</span>,</span>
+<span id="cb11-9"><a href="#cb11-9"></a>      <span class="dt">y =</span> <span class="dv">100</span>,</span>
+<span id="cb11-10"><a href="#cb11-10"></a>      <span class="dt">label =</span> <span class="kw">paste</span>(percentage, <span class="st">&quot;%&quot;</span>)),</span>
+<span id="cb11-11"><a href="#cb11-11"></a>      <span class="dt">size =</span> <span class="dv">4</span></span>
+<span id="cb11-12"><a href="#cb11-12"></a>    ) <span class="op">+</span></span>
+<span id="cb11-13"><a href="#cb11-13"></a><span class="st">    </span><span class="kw">geom_segment</span>(<span class="kw">aes</span>(</span>
+<span id="cb11-14"><a href="#cb11-14"></a>      <span class="dt">x =</span> percentage <span class="op">+</span><span class="st"> </span><span class="dv">5</span>,</span>
+<span id="cb11-15"><a href="#cb11-15"></a>      <span class="dt">xend =</span> <span class="dv">100</span>,</span>
+<span id="cb11-16"><a href="#cb11-16"></a>      <span class="dt">y =</span> <span class="dv">100</span>,</span>
+<span id="cb11-17"><a href="#cb11-17"></a>      <span class="dt">yend =</span> <span class="dv">100</span>,</span>
+<span id="cb11-18"><a href="#cb11-18"></a>      <span class="dt">color =</span> features</span>
+<span id="cb11-19"><a href="#cb11-19"></a>  ),</span>
+<span id="cb11-20"><a href="#cb11-20"></a>  <span class="dt">linetype =</span> <span class="st">&quot;dotted&quot;</span>,</span>
+<span id="cb11-21"><a href="#cb11-21"></a>  <span class="dt">linejoin =</span> <span class="st">&quot;mitre&quot;</span>,</span>
+<span id="cb11-22"><a href="#cb11-22"></a>  <span class="dt">size =</span> <span class="fl">.8</span>) <span class="op">+</span></span>
+<span id="cb11-23"><a href="#cb11-23"></a><span class="st">  </span><span class="kw">geom_segment</span>(<span class="kw">aes</span>(</span>
+<span id="cb11-24"><a href="#cb11-24"></a>    <span class="dt">x =</span> <span class="dv">0</span>,</span>
+<span id="cb11-25"><a href="#cb11-25"></a>    <span class="dt">xend =</span> percentage,</span>
+<span id="cb11-26"><a href="#cb11-26"></a>    <span class="dt">y =</span> <span class="dv">100</span>,</span>
+<span id="cb11-27"><a href="#cb11-27"></a>    <span class="dt">yend =</span> <span class="dv">100</span>,</span>
+<span id="cb11-28"><a href="#cb11-28"></a>    <span class="dt">color =</span> features</span>
+<span id="cb11-29"><a href="#cb11-29"></a>  ),</span>
+<span id="cb11-30"><a href="#cb11-30"></a>  <span class="dt">size =</span> <span class="dv">2</span>,</span>
+<span id="cb11-31"><a href="#cb11-31"></a>  <span class="dt">lineend =</span> <span class="st">&quot;round&quot;</span>) <span class="op">+</span></span>
+<span id="cb11-32"><a href="#cb11-32"></a><span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span>label,</span>
+<span id="cb11-33"><a href="#cb11-33"></a>             <span class="dt">strip.position =</span> <span class="st">&quot;bottom&quot;</span>) <span class="op">+</span></span>
+<span id="cb11-34"><a href="#cb11-34"></a><span class="st">  </span><span class="kw">coord_polar</span>() <span class="op">+</span></span>
+<span id="cb11-35"><a href="#cb11-35"></a><span class="st">  </span><span class="kw">scale_color_manual</span>(</span>
+<span id="cb11-36"><a href="#cb11-36"></a>    <span class="dt">values =</span> <span class="kw">c</span>(<span class="st">&quot;#052522&quot;</span>, <span class="st">&quot;#052522&quot;</span>, </span>
+<span id="cb11-37"><a href="#cb11-37"></a>               <span class="st">&quot;#052522&quot;</span>, <span class="st">&quot;#385132&quot;</span>, </span>
+<span id="cb11-38"><a href="#cb11-38"></a>               <span class="st">&quot;#5f3a34&quot;</span>, <span class="st">&quot;#230801&quot;</span>)) <span class="op">+</span></span>
+<span id="cb11-39"><a href="#cb11-39"></a><span class="st">  </span><span class="kw">labs</span>(</span>
+<span id="cb11-40"><a href="#cb11-40"></a>    <span class="dt">title =</span> <span class="st">&quot;</span><span class="ch">\n</span><span class="st">What Makes a Five Star Trail?&quot;</span>,</span>
+<span id="cb11-41"><a href="#cb11-41"></a>    <span class="dt">subtitle =</span> <span class="st">&quot;The most frequent features in the sixty-eight five star Washington trails&quot;</span>,</span>
+<span id="cb11-42"><a href="#cb11-42"></a>    <span class="dt">caption =</span> <span class="kw">paste0</span>(<span class="st">&quot;Source: Washington Trails Associations | See GitHub for Icons | Visualization by @ijeamaka_a&quot;</span>)</span>
+<span id="cb11-43"><a href="#cb11-43"></a>  ) <span class="op">+</span></span>
+<span id="cb11-44"><a href="#cb11-44"></a><span class="st">  </span><span class="kw">theme_classic</span>() <span class="op">+</span></span>
+<span id="cb11-45"><a href="#cb11-45"></a><span class="st">  </span><span class="kw">theme</span>(</span>
+<span id="cb11-46"><a href="#cb11-46"></a>    <span class="dt">strip.background =</span> <span class="kw">element_blank</span>(),</span>
+<span id="cb11-47"><a href="#cb11-47"></a>    <span class="dt">axis.ticks =</span> <span class="kw">element_line</span>(<span class="dt">linetype =</span> <span class="st">&quot;blank&quot;</span>), </span>
+<span id="cb11-48"><a href="#cb11-48"></a>    <span class="dt">legend.position =</span> <span class="st">&quot;none&quot;</span>,</span>
+<span id="cb11-49"><a href="#cb11-49"></a>    <span class="dt">axis.text =</span> <span class="kw">element_blank</span>(),</span>
+<span id="cb11-50"><a href="#cb11-50"></a>    <span class="dt">axis.line =</span> <span class="kw">element_blank</span>(),</span>
+<span id="cb11-51"><a href="#cb11-51"></a>    <span class="dt">axis.title =</span> <span class="kw">element_blank</span>(),</span>
+<span id="cb11-52"><a href="#cb11-52"></a>    <span class="dt">strip.text =</span> <span class="kw">element_text</span>(<span class="dt">family =</span> <span class="st">&quot;fira&quot;</span>,</span>
+<span id="cb11-53"><a href="#cb11-53"></a>                              <span class="dt">size =</span> <span class="dv">18</span>),</span>
+<span id="cb11-54"><a href="#cb11-54"></a>    <span class="dt">plot.title =</span> <span class="kw">element_text</span>(<span class="dt">family =</span> <span class="st">&quot;Ubuntu&quot;</span>, </span>
+<span id="cb11-55"><a href="#cb11-55"></a>                                  <span class="dt">face =</span> <span class="st">&quot;bold&quot;</span>,</span>
+<span id="cb11-56"><a href="#cb11-56"></a>                                  <span class="dt">size =</span> <span class="dv">35</span>, </span>
+<span id="cb11-57"><a href="#cb11-57"></a>                                  <span class="dt">hjust =</span> <span class="fl">0.5</span>),</span>
+<span id="cb11-58"><a href="#cb11-58"></a>    <span class="dt">plot.subtitle =</span> <span class="kw">element_text</span>(<span class="dt">family =</span> <span class="st">&quot;Ubuntu&quot;</span>, </span>
+<span id="cb11-59"><a href="#cb11-59"></a>                                     <span class="dt">size =</span> <span class="dv">18</span>,</span>
+<span id="cb11-60"><a href="#cb11-60"></a>                                     <span class="dt">hjust =</span> <span class="fl">0.5</span>),</span>
+<span id="cb11-61"><a href="#cb11-61"></a>    <span class="dt">plot.caption =</span> <span class="kw">element_text</span>(<span class="dt">family =</span> <span class="st">&quot;Ubuntu&quot;</span>, </span>
+<span id="cb11-62"><a href="#cb11-62"></a>                                    <span class="dt">size =</span> <span class="dv">8</span>),</span>
+<span id="cb11-63"><a href="#cb11-63"></a>    <span class="dt">plot.margin =</span> <span class="kw">margin</span>(<span class="dv">25</span>, <span class="dv">25</span>, <span class="dv">25</span>, <span class="dv">25</span>) </span>
+<span id="cb11-64"><a href="#cb11-64"></a>    </span>
+<span id="cb11-65"><a href="#cb11-65"></a>  )</span></code></pre></div>
+<p><img src="5.png" /></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="kw">ggsave</span>(<span class="dt">filename =</span> <span class="st">&quot;5.pdf&quot;</span>,</span>
+<span id="cb12-2"><a href="#cb12-2"></a>       <span class="dt">path =</span> here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;output&quot;</span>),</span>
+<span id="cb12-3"><a href="#cb12-3"></a>       <span class="dt">plot =</span> <span class="kw">last_plot</span>(),</span>
+<span id="cb12-4"><a href="#cb12-4"></a>       <span class="dt">width =</span> <span class="dv">10</span>, <span class="dt">height =</span> <span class="dv">10</span>)</span></code></pre></div>
