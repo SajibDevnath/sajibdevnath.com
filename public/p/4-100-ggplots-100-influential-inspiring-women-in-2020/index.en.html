@@ -1,0 +1,171 @@
+<script src="index.en_files/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="index.en_files/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="index.en_files/anchor-sections-1.0/anchor-sections.js"></script>
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #2a211c;
+    color: #bdae9d;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #bdae9d;  padding-left: 4px; }
+div.sourceCode
+  { color: #bdae9d; background-color: #2a211c; }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ffff00; } /* Alert */
+code span.an { color: #0066ff; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #44aa43; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #43a8ed; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #049b0a; } /* Char */
+code span.cn { } /* Constant */
+code span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Comment */
+code span.do { color: #0066ff; font-style: italic; } /* Documentation */
+code span.dt { text-decoration: underline; } /* DataType */
+code span.dv { color: #44aa43; } /* DecVal */
+code span.er { color: #ffff00; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #44aa43; } /* Float */
+code span.fu { color: #ff9358; font-weight: bold; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #43a8ed; font-weight: bold; } /* Keyword */
+code span.op { } /* Operator */
+code span.pp { font-weight: bold; } /* Preprocessor */
+code span.sc { color: #049b0a; } /* SpecialChar */
+code span.ss { color: #049b0a; } /* SpecialString */
+code span.st { color: #049b0a; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #049b0a; } /* VerbatimString */
+code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+</style>
+
+
+<p>Libraries:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="kw">library</span>(countrycode)</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="kw">library</span>(png)</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="kw">library</span>(showtext)</span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="kw">library</span>(ggimage)</span></code></pre></div>
+<p>Fonts:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">font_add_google</span>(<span class="st">&quot;Abril Fatface&quot;</span>, <span class="st">&quot;abril&quot;</span>)</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="kw">font_add_google</span>(<span class="st">&quot;Roboto&quot;</span>, <span class="st">&quot;roboto slab&quot;</span>)</span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="kw">showtext_auto</span>()</span></code></pre></div>
+<p>Load data:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>tt &lt;-<span class="st"> </span>tidytuesdayR<span class="op">::</span><span class="kw">tt_load</span>(<span class="st">&#39;2020-12-08&#39;</span>)</span>
+<span id="cb3-2"><a href="#cb3-2"></a>women &lt;-<span class="st"> </span>tt<span class="op">$</span>women</span></code></pre></div>
+<div id="preparing-the-data" class="section level2">
+<h2>Preparing the data:</h2>
+<p>Add index number to the data.frame</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>data &lt;-<span class="st"> </span>women <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">index =</span> <span class="kw">row_number</span>())</span></code></pre></div>
+<p>Add continent to dataset</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>continents &lt;-<span class="st"> </span>data <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">continent =</span> <span class="kw">countrycode</span>(country, <span class="st">&quot;country.name&quot;</span>, <span class="st">&quot;continent&quot;</span>)) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="st">  </span><span class="co"># adding missing continents</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">continent =</span> <span class="kw">case_when</span>(</span>
+<span id="cb5-5"><a href="#cb5-5"></a>    country <span class="op">==</span><span class="st"> &quot;Worldwide&quot;</span> <span class="op">~</span><span class="st"> &quot;Worldwide&quot;</span>,</span>
+<span id="cb5-6"><a href="#cb5-6"></a>    country <span class="op">==</span><span class="st"> &quot;Exiled Uighur from Ghulja (in Chinese, Yining)&quot;</span> <span class="op">~</span><span class="st"> &quot;Asia&quot;</span>,</span>
+<span id="cb5-7"><a href="#cb5-7"></a>    country <span class="op">==</span><span class="st"> &quot;Northern Ireland&quot;</span> <span class="op">~</span><span class="st"> &quot;Europe&quot;</span>,</span>
+<span id="cb5-8"><a href="#cb5-8"></a>    country <span class="op">==</span><span class="st"> &quot;Wales, UK&quot;</span> <span class="op">~</span><span class="st"> &quot;Europe&quot;</span>,</span>
+<span id="cb5-9"><a href="#cb5-9"></a>    <span class="ot">TRUE</span> <span class="op">~</span><span class="st"> </span>continent</span>
+<span id="cb5-10"><a href="#cb5-10"></a>  ))</span></code></pre></div>
+<p>Adding category numbers:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>cat_num &lt;-<span class="st"> </span>continents <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">cnum =</span> <span class="kw">case_when</span>(</span>
+<span id="cb6-3"><a href="#cb6-3"></a>    category <span class="op">==</span><span class="st"> &quot;Leadership&quot;</span> <span class="op">~</span><span class="st"> </span><span class="dv">1</span>,</span>
+<span id="cb6-4"><a href="#cb6-4"></a>    category <span class="op">==</span><span class="st"> &quot;Knowledge&quot;</span> <span class="op">~</span><span class="st"> </span><span class="dv">2</span>,</span>
+<span id="cb6-5"><a href="#cb6-5"></a>    category <span class="op">==</span><span class="st"> &quot;Identity&quot;</span> <span class="op">~</span><span class="st"> </span><span class="dv">3</span>,</span>
+<span id="cb6-6"><a href="#cb6-6"></a>    category <span class="op">==</span><span class="st"> &quot;Creativity&quot;</span> <span class="op">~</span><span class="st"> </span><span class="dv">4</span>,</span>
+<span id="cb6-7"><a href="#cb6-7"></a>    <span class="ot">TRUE</span> <span class="op">~</span><span class="st"> </span><span class="dv">5</span></span>
+<span id="cb6-8"><a href="#cb6-8"></a>  )) </span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>imgs &lt;-<span class="st"> </span><span class="kw">c</span>(</span>
+<span id="cb7-2"><a href="#cb7-2"></a>  here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;img&quot;</span>, <span class="dv">4</span>, <span class="st">&quot;1.png&quot;</span>),</span>
+<span id="cb7-3"><a href="#cb7-3"></a>  here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;img&quot;</span>, <span class="dv">4</span>, <span class="st">&quot;2.png&quot;</span>),</span>
+<span id="cb7-4"><a href="#cb7-4"></a>  here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;img&quot;</span>, <span class="dv">4</span>, <span class="st">&quot;3.png&quot;</span>),</span>
+<span id="cb7-5"><a href="#cb7-5"></a>  here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;img&quot;</span>, <span class="dv">4</span>, <span class="st">&quot;4.png&quot;</span>),</span>
+<span id="cb7-6"><a href="#cb7-6"></a>  here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;img&quot;</span>, <span class="dv">4</span>, <span class="st">&quot;5.png&quot;</span>)</span>
+<span id="cb7-7"><a href="#cb7-7"></a>)</span>
+<span id="cb7-8"><a href="#cb7-8"></a></span>
+<span id="cb7-9"><a href="#cb7-9"></a>with_imgs &lt;-<span class="st"> </span>cat_num <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb7-10"><a href="#cb7-10"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">imgs =</span> <span class="kw">case_when</span>(</span>
+<span id="cb7-11"><a href="#cb7-11"></a>    category <span class="op">==</span><span class="st"> &quot;Leadership&quot;</span> <span class="op">~</span><span class="st"> </span>imgs[cnum],</span>
+<span id="cb7-12"><a href="#cb7-12"></a>    category <span class="op">==</span><span class="st"> &quot;Knowledge&quot;</span> <span class="op">~</span><span class="st"> </span>imgs[cnum],</span>
+<span id="cb7-13"><a href="#cb7-13"></a>    category <span class="op">==</span><span class="st"> &quot;Identity&quot;</span> <span class="op">~</span><span class="st"> </span>imgs[cnum],</span>
+<span id="cb7-14"><a href="#cb7-14"></a>    category <span class="op">==</span><span class="st"> &quot;Creativity&quot;</span> <span class="op">~</span><span class="st"> </span>imgs[cnum],</span>
+<span id="cb7-15"><a href="#cb7-15"></a>    <span class="ot">TRUE</span> <span class="op">~</span><span class="st"> </span>imgs[cnum]</span>
+<span id="cb7-16"><a href="#cb7-16"></a>  )) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb7-17"><a href="#cb7-17"></a><span class="st">  </span><span class="kw">add_count</span>(category)</span></code></pre></div>
+</div>
+<div id="visualization" class="section level2">
+<h2>Visualization:</h2>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>colors &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;#ffa600&quot;</span>, <span class="st">&quot;#ff6e54&quot;</span>, <span class="st">&quot;#dd5182&quot;</span>, <span class="st">&quot;#955196&quot;</span>, <span class="st">&quot;#444e86&quot;</span>, <span class="st">&quot;#003f5c&quot;</span>)</span>
+<span id="cb8-2"><a href="#cb8-2"></a></span>
+<span id="cb8-3"><a href="#cb8-3"></a>p1 &lt;-<span class="st"> </span>with_imgs <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb8-4"><a href="#cb8-4"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> cnum, <span class="dt">y =</span> <span class="dv">1</span>, <span class="dt">fill =</span> continent, <span class="dt">width =</span> <span class="fl">.5</span>)) <span class="op">+</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="dt">color =</span> <span class="st">&quot;papayawhip&quot;</span>, <span class="dt">size =</span> <span class="fl">1.1</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb8-6"><a href="#cb8-6"></a><span class="st">  </span><span class="kw">geom_image</span>(<span class="kw">aes</span>(</span>
+<span id="cb8-7"><a href="#cb8-7"></a>    <span class="dt">image =</span> imgs,</span>
+<span id="cb8-8"><a href="#cb8-8"></a>    <span class="dt">y =</span> n <span class="op">+</span><span class="st"> </span><span class="dv">2</span></span>
+<span id="cb8-9"><a href="#cb8-9"></a>  ),</span>
+<span id="cb8-10"><a href="#cb8-10"></a>  <span class="dt">size =</span> <span class="fl">.09</span>) <span class="op">+</span></span>
+<span id="cb8-11"><a href="#cb8-11"></a><span class="st">  </span><span class="kw">scale_fill_manual</span>(<span class="dt">values =</span> colors) <span class="op">+</span></span>
+<span id="cb8-12"><a href="#cb8-12"></a><span class="st">  </span><span class="kw">xlim</span>(<span class="fl">0.75</span>, <span class="fl">5.25</span>) <span class="op">+</span></span>
+<span id="cb8-13"><a href="#cb8-13"></a><span class="st">  </span><span class="kw">ylim</span>(<span class="dv">0</span>, <span class="dv">37</span>) <span class="op">+</span></span>
+<span id="cb8-14"><a href="#cb8-14"></a><span class="st">  </span><span class="kw">theme</span>(</span>
+<span id="cb8-15"><a href="#cb8-15"></a>    <span class="dt">aspect.ratio =</span> <span class="dv">1</span>,</span>
+<span id="cb8-16"><a href="#cb8-16"></a>    <span class="dt">panel.background =</span> <span class="kw">element_rect</span>(<span class="dt">fill =</span> <span class="st">&quot;papayawhip&quot;</span>),</span>
+<span id="cb8-17"><a href="#cb8-17"></a>    <span class="dt">plot.background =</span> <span class="kw">element_rect</span>(<span class="st">&quot;papayawhip&quot;</span>)</span>
+<span id="cb8-18"><a href="#cb8-18"></a>  )</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>p1 <span class="op">+</span><span class="st"> </span></span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">&quot;100 Influential &amp; Inspiring Women in 2020&quot;</span>,</span>
+<span id="cb9-3"><a href="#cb9-3"></a>       <span class="dt">subtitle =</span> <span class="st">&quot;This year, BBC News honored 100 women leaders, intellectuals, activists, and creatives.</span><span class="ch">\n</span><span class="st">They left a space, called Unsung Hero, to recognize the unsung heroines worldwide.&quot;</span>,</span>
+<span id="cb9-4"><a href="#cb9-4"></a>       <span class="dt">caption =</span> <span class="st">&quot;Created by @eliane_mitchll | Source: BBC News | #TidyTuesday Week 50 | See Github for Icons&quot;</span>) <span class="op">+</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a><span class="st">  </span><span class="kw">theme</span>(</span>
+<span id="cb9-6"><a href="#cb9-6"></a>    <span class="dt">axis.title =</span> <span class="kw">element_blank</span>(),</span>
+<span id="cb9-7"><a href="#cb9-7"></a>    <span class="dt">axis.text.x =</span> <span class="kw">element_blank</span>(),</span>
+<span id="cb9-8"><a href="#cb9-8"></a>    <span class="dt">axis.ticks.x =</span> <span class="kw">element_blank</span>(),</span>
+<span id="cb9-9"><a href="#cb9-9"></a>    <span class="dt">text =</span> <span class="kw">element_text</span>(<span class="dt">family =</span> <span class="st">&quot;roboto slab&quot;</span>, <span class="dt">size =</span> <span class="dv">15</span>),</span>
+<span id="cb9-10"><a href="#cb9-10"></a>    <span class="dt">plot.title =</span> <span class="kw">element_text</span>(<span class="dt">family =</span> <span class="st">&quot;abril&quot;</span>, <span class="dt">size =</span> <span class="dv">25</span>, <span class="dt">hjust =</span> <span class="dv">0</span>),</span>
+<span id="cb9-11"><a href="#cb9-11"></a>    <span class="dt">plot.subtitle =</span> <span class="kw">element_text</span>(<span class="dt">size =</span> <span class="dv">12</span>, <span class="dt">hjust =</span> <span class="dv">0</span>),</span>
+<span id="cb9-12"><a href="#cb9-12"></a>    <span class="dt">plot.caption =</span> <span class="kw">element_text</span>(<span class="dt">size =</span> <span class="dv">8</span>, <span class="dt">hjust =</span> <span class="dv">1</span>),</span>
+<span id="cb9-13"><a href="#cb9-13"></a>    <span class="dt">plot.margin =</span> <span class="kw">margin</span>(<span class="dv">25</span>,<span class="dv">25</span>,<span class="dv">25</span>,<span class="dv">25</span>),</span>
+<span id="cb9-14"><a href="#cb9-14"></a>    <span class="dt">legend.direction =</span> <span class="st">&quot;horizontal&quot;</span>,</span>
+<span id="cb9-15"><a href="#cb9-15"></a>    <span class="dt">legend.background =</span> <span class="kw">element_rect</span>(<span class="dt">fill =</span> <span class="st">&quot;papayawhip&quot;</span>),</span>
+<span id="cb9-16"><a href="#cb9-16"></a>    <span class="dt">legend.title =</span> <span class="kw">element_blank</span>(),</span>
+<span id="cb9-17"><a href="#cb9-17"></a>    <span class="dt">legend.key.size =</span> <span class="kw">unit</span>(<span class="fl">0.5</span>, <span class="st">&quot;cm&quot;</span>),</span>
+<span id="cb9-18"><a href="#cb9-18"></a>    <span class="dt">legend.position =</span> <span class="kw">c</span>(<span class="fl">0.70</span>, <span class="fl">0.90</span>)</span>
+<span id="cb9-19"><a href="#cb9-19"></a>  )</span></code></pre></div>
+<p><img src="4.png" /></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw">ggsave</span>(<span class="dt">plot =</span> <span class="kw">last_plot</span>(),</span>
+<span id="cb10-2"><a href="#cb10-2"></a>       <span class="dt">filename =</span> here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;output&quot;</span>, <span class="st">&quot;4.pdf&quot;</span>),</span>
+<span id="cb10-3"><a href="#cb10-3"></a>       <span class="dt">dpi =</span> <span class="dv">300</span>,</span>
+<span id="cb10-4"><a href="#cb10-4"></a>       <span class="dt">height =</span> <span class="dv">10</span>, <span class="dt">width =</span> <span class="dv">10</span>)</span></code></pre></div>
+<p>Original: <a href="https://github.com/elianemitchell/mytidytuesdaycode/blob/main/bbcwomen2020_week50_2020.R">Eliane Mitchell</a></p>
+</div>
