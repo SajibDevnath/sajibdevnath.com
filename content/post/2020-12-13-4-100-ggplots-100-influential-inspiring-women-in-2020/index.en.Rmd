@@ -39,7 +39,7 @@ women <- tt$women
 ```
 
 ## Preparing the data:
-Add index number to the data.frame
+Add index number to the data.frame:
 ```{r eval=FALSE}
 data <- women %>% 
   mutate(index = row_number())
