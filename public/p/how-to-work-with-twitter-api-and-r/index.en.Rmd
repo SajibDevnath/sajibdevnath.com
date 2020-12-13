@@ -1,0 +1,14 @@
+---
+title: How to work with Twitter API and R
+author: Sajib Devnath
+date: '2020-11-26'
+slug: how-to-work-with-twitter-api-and-r
+draft: true
+categories:
+  - Learning
+tags:
+  - api
+  - twitter
+---
+
+Package needed: `rtweet`

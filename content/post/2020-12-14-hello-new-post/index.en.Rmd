@@ -1,0 +1,13 @@
+---
+title: Hello new post
+author: Sajib Devnath
+date: '2020-12-14'
+slug: hello-new-post
+categories:
+  - Dataviz
+tags:
+  - ggplot2
+---
+
+
+World
