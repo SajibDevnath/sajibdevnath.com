@@ -77,12 +77,12 @@ code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">font_add_google</span>(<span class="st">&quot;Abril Fatface&quot;</span>, <span class="st">&quot;abril&quot;</span>)</span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="kw">font_add_google</span>(<span class="st">&quot;Roboto&quot;</span>, <span class="st">&quot;roboto slab&quot;</span>)</span>
 <span id="cb2-3"><a href="#cb2-3"></a><span class="kw">showtext_auto</span>()</span></code></pre></div>
-<p>Load data:</p>
+<p>Loading the data:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>tt &lt;-<span class="st"> </span>tidytuesdayR<span class="op">::</span><span class="kw">tt_load</span>(<span class="st">&#39;2020-12-08&#39;</span>)</span>
 <span id="cb3-2"><a href="#cb3-2"></a>women &lt;-<span class="st"> </span>tt<span class="op">$</span>women</span></code></pre></div>
 <div id="preparing-the-data" class="section level2">
 <h2>Preparing the data:</h2>
-<p>Add index number to the data.frame</p>
+<p>Add index number to the data.frame:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>data &lt;-<span class="st"> </span>women <span class="op">%&gt;%</span><span class="st"> </span></span>
 <span id="cb4-2"><a href="#cb4-2"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">index =</span> <span class="kw">row_number</span>())</span></code></pre></div>
 <p>Add continent to dataset</p>

@@ -1,0 +1,12 @@
+---
+title: test post
+author: Sajib Devnath
+date: '2020-12-14'
+slug: test-post
+categories:
+  - 100-charts
+tags:
+  - data-visualization
+---
+
+Thus 
