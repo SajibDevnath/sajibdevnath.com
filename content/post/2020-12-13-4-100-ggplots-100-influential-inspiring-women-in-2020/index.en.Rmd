@@ -45,7 +45,7 @@ data <- women %>%
   mutate(index = row_number())
 ```
 
-Add continent to dataset
+Add continent to dataset:
 ```{r eval=FALSE}
 continents <- data %>% 
   mutate(continent = countrycode(country, "country.name", "continent")) %>% 
