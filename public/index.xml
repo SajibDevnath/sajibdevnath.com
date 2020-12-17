@@ -6,7 +6,162 @@
         <description>Recent content on Sajib Devnath</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 13 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.sajibdevnath.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 17 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.sajibdevnath.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Types of Plots - Joy plot</title>
+        <link>https://www.sajibdevnath.com/p/types-of-plots-joy-plot/</link>
+        <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.sajibdevnath.com/p/types-of-plots-joy-plot/</guid>
+        <description>
+&lt;script src=&#34;https://www.sajibdevnath.com/p/types-of-plots-joy-plot/index.en_files/accessible-code-block/empty-anchor.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://www.sajibdevnath.com/p/types-of-plots-joy-plot/index.en_files/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://www.sajibdevnath.com/p/types-of-plots-joy-plot/index.en_files/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;style type=&#34;text/css&#34;&gt;
+code.sourceCode &gt; span { display: inline-block; line-height: 1.25; }
+code.sourceCode &gt; span { color: inherit; text-decoration: inherit; }
+code.sourceCode &gt; span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode &gt; span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code &gt; span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code &gt; span &gt; a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #2a211c;
+    color: #bdae9d;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #bdae9d;  padding-left: 4px; }
+div.sourceCode
+  { color: #bdae9d; background-color: #2a211c; }
+@media screen {
+code.sourceCode &gt; span &gt; a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ffff00; } /* Alert */
+code span.an { color: #0066ff; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #44aa43; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #43a8ed; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #049b0a; } /* Char */
+code span.cn { } /* Constant */
+code span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Comment */
+code span.do { color: #0066ff; font-style: italic; } /* Documentation */
+code span.dt { text-decoration: underline; } /* DataType */
+code span.dv { color: #44aa43; } /* DecVal */
+code span.er { color: #ffff00; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #44aa43; } /* Float */
+code span.fu { color: #ff9358; font-weight: bold; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #43a8ed; font-weight: bold; } /* Keyword */
+code span.op { } /* Operator */
+code span.pp { font-weight: bold; } /* Preprocessor */
+code span.sc { color: #049b0a; } /* SpecialChar */
+code span.ss { color: #049b0a; } /* SpecialString */
+code span.st { color: #049b0a; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #049b0a; } /* VerbatimString */
+code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+&lt;/style&gt;
+
+
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb1&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;span id=&#34;cb1-1&#34;&gt;&lt;a href=&#34;#cb1-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;library&lt;/span&gt;(tidyverse)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;## -- Attaching packages --------------------------------------- tidyverse 1.3.0 --&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## v ggplot2 3.3.2     v purrr   0.3.4
+## v tibble  3.0.4     v dplyr   1.0.2
+## v tidyr   1.1.2     v stringr 1.4.0
+## v readr   1.4.0     v forcats 0.5.0&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb5&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;span id=&#34;cb5-1&#34;&gt;&lt;a href=&#34;#cb5-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;library&lt;/span&gt;(ggridges)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb6&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;span id=&#34;cb6-1&#34;&gt;&lt;a href=&#34;#cb6-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(iris, &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; Sepal.Length, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; Species, &lt;span class=&#34;dt&#34;&gt;group =&lt;/span&gt; Species)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb6-2&#34;&gt;&lt;a href=&#34;#cb6-2&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_density_ridges&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;fill =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;#00AFBB&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;## Picking joint bandwidth of 0.181&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.sajibdevnath.com/p/types-of-plots-joy-plot/index.en_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb8&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;span id=&#34;cb8-1&#34;&gt;&lt;a href=&#34;#cb8-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;co&#34;&gt;# Closed polygons&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb8-2&#34;&gt;&lt;a href=&#34;#cb8-2&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(iris, &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; Sepal.Length, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; Species, &lt;span class=&#34;dt&#34;&gt;group =&lt;/span&gt; Species)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb8-3&#34;&gt;&lt;a href=&#34;#cb8-3&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_density_ridges2&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;fill =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;#00AFBB&amp;quot;&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;rel_min_height =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;0.01&lt;/span&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;## Picking joint bandwidth of 0.181&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.sajibdevnath.com/p/types-of-plots-joy-plot/index.en_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb10&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;span id=&#34;cb10-1&#34;&gt;&lt;a href=&#34;#cb10-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;co&#34;&gt;# scale = 0.6, not touching&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb10-2&#34;&gt;&lt;a href=&#34;#cb10-2&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(iris, &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; Sepal.Length, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; Species)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb10-3&#34;&gt;&lt;a href=&#34;#cb10-3&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_density_ridges&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;scale =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;3.8&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;alpha =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;0.7&lt;/span&gt;) &lt;span class=&#34;co&#34;&gt;## scales for overlap control&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;## Picking joint bandwidth of 0.181&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.sajibdevnath.com/p/types-of-plots-joy-plot/index.en_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb12&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;span id=&#34;cb12-1&#34;&gt;&lt;a href=&#34;#cb12-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;co&#34;&gt;# Change the density area fill colors by groups&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb12-2&#34;&gt;&lt;a href=&#34;#cb12-2&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(iris, &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; Sepal.Length, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; Species)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb12-3&#34;&gt;&lt;a href=&#34;#cb12-3&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_density_ridges&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;fill =&lt;/span&gt; Species)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb12-4&#34;&gt;&lt;a href=&#34;#cb12-4&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;scale_fill_manual&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;values =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;c&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;#00AFBB&amp;quot;&lt;/span&gt;, &lt;span class=&#34;st&#34;&gt;&amp;quot;#E7B800&amp;quot;&lt;/span&gt;, &lt;span class=&#34;st&#34;&gt;&amp;quot;#FC4E07&amp;quot;&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb12-5&#34;&gt;&lt;a href=&#34;#cb12-5&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;legend.position =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;none&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;## Picking joint bandwidth of 0.181&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.sajibdevnath.com/p/types-of-plots-joy-plot/index.en_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb14&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;span id=&#34;cb14-1&#34;&gt;&lt;a href=&#34;#cb14-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(&lt;/span&gt;
+&lt;span id=&#34;cb14-2&#34;&gt;&lt;a href=&#34;#cb14-2&#34;&gt;&lt;/a&gt;  lincoln_weather, &lt;/span&gt;
+&lt;span id=&#34;cb14-3&#34;&gt;&lt;a href=&#34;#cb14-3&#34;&gt;&lt;/a&gt;  &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;dt&#34;&gt;Mean Temperature [F]&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;`&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;dt&#34;&gt;Month&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;`&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;fill =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;stat&lt;/span&gt;(x))&lt;/span&gt;
+&lt;span id=&#34;cb14-4&#34;&gt;&lt;a href=&#34;#cb14-4&#34;&gt;&lt;/a&gt;  ) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb14-5&#34;&gt;&lt;a href=&#34;#cb14-5&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_density_ridges_gradient&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;scale =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;3&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;size =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;0.3&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;rel_min_height =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;0.01&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb14-6&#34;&gt;&lt;a href=&#34;#cb14-6&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;scale_fill_viridis_c&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;name =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;Temp. [F]&amp;quot;&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;option =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;C&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb14-7&#34;&gt;&lt;a href=&#34;#cb14-7&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;labs&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;title =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;#39;Temperatures in Lincoln NE&amp;#39;&lt;/span&gt;) &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;## Picking joint bandwidth of 3.37&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.sajibdevnath.com/p/types-of-plots-joy-plot/index.en_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb16&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;span id=&#34;cb16-1&#34;&gt;&lt;a href=&#34;#cb16-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(iris, &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; Sepal.Length, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; Species)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb16-2&#34;&gt;&lt;a href=&#34;#cb16-2&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;stat_density_ridges&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;quantile_lines =&lt;/span&gt; &lt;span class=&#34;ot&#34;&gt;TRUE&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;quantiles =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;0.5&lt;/span&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;## Picking joint bandwidth of 0.181&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.sajibdevnath.com/p/types-of-plots-joy-plot/index.en_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb18&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;span id=&#34;cb18-1&#34;&gt;&lt;a href=&#34;#cb18-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;co&#34;&gt;# Indicate the 2.5% and 97.5% tails&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb18-2&#34;&gt;&lt;a href=&#34;#cb18-2&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(iris, &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; Sepal.Length, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; Species)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb18-3&#34;&gt;&lt;a href=&#34;#cb18-3&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;stat_density_ridges&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;quantile_lines =&lt;/span&gt; &lt;span class=&#34;ot&#34;&gt;TRUE&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;quantiles =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;c&lt;/span&gt;(&lt;span class=&#34;fl&#34;&gt;0.025&lt;/span&gt;, &lt;span class=&#34;fl&#34;&gt;0.975&lt;/span&gt;), &lt;span class=&#34;dt&#34;&gt;alpha =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;0.7&lt;/span&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;## Picking joint bandwidth of 0.181&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.sajibdevnath.com/p/types-of-plots-joy-plot/index.en_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb20&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;span id=&#34;cb20-1&#34;&gt;&lt;a href=&#34;#cb20-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;co&#34;&gt;# Color by quantiles&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb20-2&#34;&gt;&lt;a href=&#34;#cb20-2&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(iris, &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; Sepal.Length, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; Species, &lt;span class=&#34;dt&#34;&gt;fill =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;factor&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;stat&lt;/span&gt;(quantile)))) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb20-3&#34;&gt;&lt;a href=&#34;#cb20-3&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;stat_density_ridges&lt;/span&gt;(&lt;/span&gt;
+&lt;span id=&#34;cb20-4&#34;&gt;&lt;a href=&#34;#cb20-4&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;geom =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;density_ridges_gradient&amp;quot;&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;calc_ecdf =&lt;/span&gt; &lt;span class=&#34;ot&#34;&gt;TRUE&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb20-5&#34;&gt;&lt;a href=&#34;#cb20-5&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;quantiles =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;quantile_lines =&lt;/span&gt; &lt;span class=&#34;ot&#34;&gt;TRUE&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb20-6&#34;&gt;&lt;a href=&#34;#cb20-6&#34;&gt;&lt;/a&gt;  ) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb20-7&#34;&gt;&lt;a href=&#34;#cb20-7&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;scale_fill_viridis_d&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;name =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;Quartiles&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;## Picking joint bandwidth of 0.181&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.sajibdevnath.com/p/types-of-plots-joy-plot/index.en_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb22&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;span id=&#34;cb22-1&#34;&gt;&lt;a href=&#34;#cb22-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;co&#34;&gt;# Highlight the tails of the distributions&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb22-2&#34;&gt;&lt;a href=&#34;#cb22-2&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(iris, &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; Sepal.Length, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; Species, &lt;span class=&#34;dt&#34;&gt;fill =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;factor&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;stat&lt;/span&gt;(quantile)))) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb22-3&#34;&gt;&lt;a href=&#34;#cb22-3&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;stat_density_ridges&lt;/span&gt;(&lt;/span&gt;
+&lt;span id=&#34;cb22-4&#34;&gt;&lt;a href=&#34;#cb22-4&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;geom =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;density_ridges_gradient&amp;quot;&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb22-5&#34;&gt;&lt;a href=&#34;#cb22-5&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;calc_ecdf =&lt;/span&gt; &lt;span class=&#34;ot&#34;&gt;TRUE&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb22-6&#34;&gt;&lt;a href=&#34;#cb22-6&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;quantiles =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;c&lt;/span&gt;(&lt;span class=&#34;fl&#34;&gt;0.025&lt;/span&gt;, &lt;span class=&#34;fl&#34;&gt;0.975&lt;/span&gt;)&lt;/span&gt;
+&lt;span id=&#34;cb22-7&#34;&gt;&lt;a href=&#34;#cb22-7&#34;&gt;&lt;/a&gt;  ) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb22-8&#34;&gt;&lt;a href=&#34;#cb22-8&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;scale_fill_manual&lt;/span&gt;(&lt;/span&gt;
+&lt;span id=&#34;cb22-9&#34;&gt;&lt;a href=&#34;#cb22-9&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;name =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;Probability&amp;quot;&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;values =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;c&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;#FF0000A0&amp;quot;&lt;/span&gt;, &lt;span class=&#34;st&#34;&gt;&amp;quot;#A0A0A0A0&amp;quot;&lt;/span&gt;, &lt;span class=&#34;st&#34;&gt;&amp;quot;#0000FFA0&amp;quot;&lt;/span&gt;),&lt;/span&gt;
+&lt;span id=&#34;cb22-10&#34;&gt;&lt;a href=&#34;#cb22-10&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;labels =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;c&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;(0, 0.025]&amp;quot;&lt;/span&gt;, &lt;span class=&#34;st&#34;&gt;&amp;quot;(0.025, 0.975]&amp;quot;&lt;/span&gt;, &lt;span class=&#34;st&#34;&gt;&amp;quot;(0.975, 1]&amp;quot;&lt;/span&gt;)&lt;/span&gt;
+&lt;span id=&#34;cb22-11&#34;&gt;&lt;a href=&#34;#cb22-11&#34;&gt;&lt;/a&gt;  )&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;## Picking joint bandwidth of 0.181&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.sajibdevnath.com/p/types-of-plots-joy-plot/index.en_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb24&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;span id=&#34;cb24-1&#34;&gt;&lt;a href=&#34;#cb24-1&#34;&gt;&lt;/a&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(iris, &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; Sepal.Length, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; Species, &lt;span class=&#34;dt&#34;&gt;height =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;stat&lt;/span&gt;(density))) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb24-2&#34;&gt;&lt;a href=&#34;#cb24-2&#34;&gt;&lt;/a&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_density_ridges&lt;/span&gt;(&lt;/span&gt;
+&lt;span id=&#34;cb24-3&#34;&gt;&lt;a href=&#34;#cb24-3&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;stat =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;binline&amp;quot;&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;bins =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;20&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;scale =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;0.95&lt;/span&gt;,&lt;/span&gt;
+&lt;span id=&#34;cb24-4&#34;&gt;&lt;a href=&#34;#cb24-4&#34;&gt;&lt;/a&gt;    &lt;span class=&#34;dt&#34;&gt;draw_baseline =&lt;/span&gt; &lt;span class=&#34;ot&#34;&gt;FALSE&lt;/span&gt;&lt;/span&gt;
+&lt;span id=&#34;cb24-5&#34;&gt;&lt;a href=&#34;#cb24-5&#34;&gt;&lt;/a&gt;    )&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.sajibdevnath.com/p/types-of-plots-joy-plot/index.en_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>#4 100-ggplots 100 Influential &amp; Inspiring Women in 2020</title>
         <link>https://www.sajibdevnath.com/p/4-100-ggplots-100-influential-inspiring-women-in-2020/</link>
         <pubDate>Sun, 13 Dec 2020 00:00:00 +0000</pubDate>

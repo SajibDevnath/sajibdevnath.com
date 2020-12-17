@@ -1,0 +1,101 @@
+---
+title: Types of Plots - Joy plot
+author: Sajib Devnath
+date: '2020-12-17'
+slug: types-of-plots-joy-plot
+categories:
+  - Dataviz
+  - Learning
+tags:
+  - ggplot2
+output:
+  blogdown::html_page:
+    highlight: espresso
+---
+
+
+```{r}
+library(tidyverse)
+library(ggridges)
+```
+
+
+```{r}
+ggplot(iris, aes(x = Sepal.Length, y = Species, group = Species)) + 
+  geom_density_ridges(fill = "#00AFBB")
+```
+
+```{r}
+# Closed polygons
+ggplot(iris, aes(x = Sepal.Length, y = Species, group = Species)) + 
+  geom_density_ridges2(fill = "#00AFBB", rel_min_height = 0.01)
+```
+
+```{r}
+# scale = 0.6, not touching
+ggplot(iris, aes(x = Sepal.Length, y = Species)) + 
+  geom_density_ridges(scale = 3.8, alpha = 0.7) ## scales for overlap control
+```
+
+```{r}
+# Change the density area fill colors by groups
+ggplot(iris, aes(x = Sepal.Length, y = Species)) +
+  geom_density_ridges(aes(fill = Species)) +
+  scale_fill_manual(values = c("#00AFBB", "#E7B800", "#FC4E07")) +
+  theme(legend.position = "none")
+```
+
+
+```{r}
+ggplot(
+  lincoln_weather, 
+  aes(x = `Mean Temperature [F]`, y = `Month`, fill = stat(x))
+  ) +
+  geom_density_ridges_gradient(scale = 3, size = 0.3, rel_min_height = 0.01) +
+  scale_fill_viridis_c(name = "Temp. [F]", option = "C") +
+  labs(title = 'Temperatures in Lincoln NE') 
+```
+
+
+```{r}
+ggplot(iris, aes(x = Sepal.Length, y = Species)) +
+  stat_density_ridges(quantile_lines = TRUE, quantiles = 0.5)
+```
+
+```{r}
+# Indicate the 2.5% and 97.5% tails
+ggplot(iris, aes(x = Sepal.Length, y = Species)) +
+  stat_density_ridges(quantile_lines = TRUE, quantiles = c(0.025, 0.975), alpha = 0.7)
+```
+
+```{r}
+# Color by quantiles
+ggplot(iris, aes(x = Sepal.Length, y = Species, fill = factor(stat(quantile)))) +
+  stat_density_ridges(
+    geom = "density_ridges_gradient", calc_ecdf = TRUE,
+    quantiles = 2, quantile_lines = TRUE
+  ) +
+  scale_fill_viridis_d(name = "Quartiles")
+```
+
+```{r}
+# Highlight the tails of the distributions
+ggplot(iris, aes(x = Sepal.Length, y = Species, fill = factor(stat(quantile)))) +
+  stat_density_ridges(
+    geom = "density_ridges_gradient",
+    calc_ecdf = TRUE,
+    quantiles = c(0.025, 0.975)
+  ) +
+  scale_fill_manual(
+    name = "Probability", values = c("#FF0000A0", "#A0A0A0A0", "#0000FFA0"),
+    labels = c("(0, 0.025]", "(0.025, 0.975]", "(0.975, 1]")
+  )
+```
+
+```{r}
+ggplot(iris, aes(x = Sepal.Length, y = Species, height = stat(density))) + 
+  geom_density_ridges(
+    stat = "binline", bins = 20, scale = 0.95,
+    draw_baseline = FALSE
+    )
+```
